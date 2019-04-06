@@ -1,0 +1,325 @@
+Day number 1:
+House temperature: 27 °C Consumption: 14978
+
+08:00 - Sensor reacts on STORM
+08:00 - Closing all windows and shutting all blinds!
+08:00 - David is using massage chair
+08:00 - Having a 'm'sážž' in this fancy massage chair!
+08:00 - Marek is using fridge
+08:00 - fridge is empty
+08:00 - Marekfound free Car it will take only 5 minutes.
+08:00 - Marekbought food and will fill fridge
+08:00 - Monika is using massage chair
+08:00 - Having a 'm'sážž' in this fancy massage chair!
+08:00 - Honza wants to do sport.
+08:00 - EquipmentSKI  was found
+08:00 - Honza is going to use it.
+08:00 - Stepan is using TV
+08:00 - Watching i'm not watching this bull***! now!
+08:00 - Magda is using Xbox (n)One
+08:00 - Now playing medieval sex simulator 3000 now!
+08:00 - Luk broke TV
+08:00 - Yoda broke Xbox (n)One
+08:00 - Mica broke CD player
+08:02 - Stepan wants to do sport.
+08:02 - EquipmentBIKE  was found
+08:02 - Stepan is going to use it.
+08:06 - Marek is using fridge
+08:06 - fridge is empty
+08:06 - Marekfound free Car it will take only 5 minutes.
+08:06 - Marekbought food and will fill fridge
+08:12 - Marek is using computer
+08:12 - OMG i have HW to a four credit subject OSY!
+08:31 - David is using CoffeeMaker
+08:31 - Monika wants to do sport.
+08:31 - EquipmentBIKE  was found
+08:31 - Monika is going to use it.
+08:33 - David is using Xbox (n)One
+08:33 - Now playing This Fifa1415 is on fire! now!
+08:33 - Stepan wants to do sport.
+08:33 - EquipmentBIKE  was found
+08:33 - Stepan is going to use it.
+08:54 - David is using CD player
+08:54 - Listening to POMOC KRVACIM Z USI! now!
+08:56 - David is using CD player
+08:56 - CD player broked during using.
+08:56 - David repaired CD player
+08:56 - CD player was repaired by David
+08:56 - David uses CD player again.
+08:56 - Listening to POMOC KRVACIM Z USI! now!
+09:01 - Honza wants to do sport.
+09:01 - EquipmentSKI  was found
+09:01 - Honza is going to use it.
+09:01 - Luk broke Xbox (n)One
+09:01 - Yoda broke massage chair
+09:01 - Mica broke TV
+09:02 - Sensor reacts on SNOW
+09:02 - House temperature increased!
+09:04 - Stepan is using massage chair
+09:04 - massage chair broked during using.
+09:04 - Stepan is calling adult to repair it.
+09:04 - All adults are busy -> nobody can repair it now
+09:04 - Stepan uses massage chair again.
+09:05 - Stepan wants to do sport.
+09:05 - EquipmentBIKE  was found
+09:05 - Stepan is going to use it.
+09:13 - David is using CoffeeMaker
+09:15 - David is using TV
+09:15 - TV is broken now!
+09:15 - Watching Chvostnaty Gabor! now!
+09:32 - Monika wants to do sport.
+09:32 - EquipmentBIKE  was found
+09:32 - Monika is going to use it.
+09:36 - Stepan is using CoffeeMaker
+09:38 - Stepan is using CD player
+09:38 - Listening to POMOC KRVACIM Z USI! now!
+09:40 - Stepan wants to do sport.
+09:40 - EquipmentBIKE  was found
+09:40 - Stepan is going to use it.
+10:02 - Honza is using massage chair
+10:02 - massage chair broked during using.
+10:02 - Honza repaired massage chair
+10:02 - massage chair was repaired by Honza
+10:02 - Honza uses massage chair again.
+10:02 - Having a 'm'sážž' in this fancy massage chair!
+10:02 - Luk broke washing machine
+10:02 - Yoda broke massage chair
+10:02 - Mica broke computer
+10:04 - Sensor reacts on SNOW
+10:04 - House temperature increased!
+10:11 - Stepan is using CoffeeMaker
+10:13 - Stepan is using washing machine
+10:13 - Setting washing machine to wash clothes!
+10:24 - Stepan takes a nap.
+10:33 - Monika wants to do sport.
+10:33 - EquipmentSKI  was found
+10:33 - Monika is going to use it.
+10:43 - Honza is using computer
+10:43 - OMG i have HW to a four credit subject OSY!
+10:46 - David wants to do sport.
+10:46 - EquipmentBIKE  was found
+10:46 - David is going to use it.
+11:03 - Luk broke washing machine
+11:03 - Yoda broke Xbox (n)One
+11:03 - Mica broke TV
+11:06 - Sensor reacts on STORM
+11:06 - Closing all windows and shutting all blinds!
+11:25 - Stepan is using massage chair
+11:25 - Having a 'm'sážž' in this fancy massage chair!
+11:34 - Monika wants to do sport.
+11:34 - EquipmentSKI  was found
+11:34 - Monika is going to use it.
+11:47 - David wants to do sport.
+11:47 - EquipmentBIKE  was found
+11:47 - David is going to use it.
+11:56 - Stepan wants to do sport.
+11:56 - EquipmentBIKE  was found
+11:56 - Stepan is going to use it.
+12:04 - Luk broke CD player
+12:04 - Yoda broke Xbox (n)One
+12:04 - Mica broke Xbox (n)One
+12:08 - Sensor reacts on STORM
+12:08 - Closing all windows and shutting all blinds!
+12:27 - Stepan wants to do sport.
+12:27 - EquipmentBIKE  was found
+12:27 - Stepan is going to use it.
+12:35 - Monika is using CoffeeMaker
+12:37 - Monika wants to do sport.
+12:37 - EquipmentSKI  was found
+12:37 - Monika is going to use it.
+12:48 - David is using Xbox (n)One
+12:48 - Xbox (n)One broked during using.
+12:48 - David repaired Xbox (n)One
+12:48 - Xbox (n)One was repaired by David
+12:48 - David uses Xbox (n)One again.
+12:48 - Now playing medieval sex simulator 3000 now!
+12:58 - Stepan wants to do sport.
+12:58 - EquipmentBIKE  was found
+12:58 - Stepan is going to use it.
+13:05 - Luk broke CoffeeMaker
+13:05 - Yoda broke washing machine
+13:05 - Mica broke massage chair
+13:10 - Sensor reacts on WIND
+13:10 - Closing all windows!
+13:29 - Stepan wants to do sport.
+13:29 - EquipmentBIKE  was found
+13:29 - Stepan is going to use it.
+13:38 - Monika wants to do sport.
+13:38 - EquipmentSKI  was found
+13:38 - Monika is going to use it.
+14:00 - Stepan is using CD player
+14:00 - CD player broked during using.
+14:00 - Stepan is calling adult to repair it.
+14:00 - All adults are busy -> nobody can repair it now
+14:00 - Stepan uses CD player again.
+14:01 - Stepan wants to do sport.
+14:01 - EquipmentBIKE  was found
+14:01 - Stepan is going to use it.
+14:06 - Luk broke Xbox (n)One
+14:06 - Yoda broke massage chair
+14:06 - Mica broke TV
+14:12 - Sensor reacts on SUN
+14:12 - Opening all windows, shutting all blinds!
+14:32 - Stepan wants to do sport.
+14:32 - EquipmentBIKE  was found
+14:32 - Stepan is going to use it.
+14:39 - Monika wants to do sport.
+14:39 - EquipmentSKI  was found
+14:39 - Monika is going to use it.
+15:03 - Stepan wants to do sport.
+15:03 - EquipmentBIKE  was found
+15:03 - Stepan is going to use it.
+15:07 - Luk broke TV
+15:07 - Yoda broke washing machine
+15:07 - Mica broke CD player
+15:14 - Sensor reacts on STORM
+15:14 - Closing all windows and shutting all blinds!
+15:34 - Stepan wants to do sport.
+15:34 - EquipmentBIKE  was found
+15:34 - Stepan is going to use it.
+15:40 - Monika wants to do sport.
+15:40 - EquipmentSKI  was found
+15:40 - Monika is going to use it.
+16:05 - Stepan takes a nap.
+16:08 - Luk broke computer
+16:08 - Yoda broke TV
+16:08 - Mica broke washing machine
+16:16 - Sensor reacts on WIND
+16:16 - Closing all windows!
+16:41 - Monika takes a nap.
+17:06 - Stepan wants to do sport.
+17:06 - EquipmentSKI  was found
+17:06 - Stepan is going to use it.
+17:09 - Luk broke Xbox (n)One
+17:09 - Yoda broke computer
+17:09 - Mica broke Xbox (n)One
+17:18 - Sensor reacts on SNOW
+17:18 - House temperature increased!
+17:37 - Stepan is using massage chair
+17:37 - massage chair broked during using.
+17:37 - Stepan is calling adult to repair it.
+17:37 - All adults are busy -> nobody can repair it now
+17:37 - Stepan uses massage chair again.
+17:38 - Stepan wants to do sport.
+17:38 - EquipmentSKI  was found
+17:38 - Stepan is going to use it.
+17:42 - Monika wants to do sport.
+17:42 - EquipmentBIKE  was found
+17:42 - Monika is going to use it.
+18:01 - Magda is using washing machine
+18:01 - washing machine broked during using.
+18:01 - Magda is calling adult to repair it.
+18:01 - All adults are busy -> nobody can repair it now
+18:01 - Magda uses washing machine again.
+18:02 - Magda wants to do sport.
+18:02 - EquipmentBIKE  was found
+18:02 - Magda is going to use it.
+18:09 - Stepan is using CD player
+18:09 - CD player broked during using.
+18:09 - Stepan is calling adult to repair it.
+18:09 - All adults are busy -> nobody can repair it now
+18:09 - Stepan uses CD player again.
+18:10 - Stepan wants to do sport.
+18:10 - EquipmentSKI  was found
+18:10 - Stepan is going to use it.
+18:10 - Luk broke Xbox (n)One
+18:10 - Yoda broke TV
+18:10 - Mica broke massage chair
+18:20 - Sensor reacts on STORM
+18:20 - Closing all windows and shutting all blinds!
+18:33 - Magda is using CoffeeMaker
+18:33 - CoffeeMaker broked during using.
+18:33 - Magda is calling adult to repair it.
+18:33 - All adults are busy -> nobody can repair it now
+18:33 - Magda uses CoffeeMaker again.
+18:34 - Magda wants to do sport.
+18:34 - EquipmentBIKE  was found
+18:34 - Magda is going to use it.
+18:41 - Stepan wants to do sport.
+18:41 - EquipmentSKI  was found
+18:41 - Stepan is going to use it.
+18:43 - Monika is using massage chair
+18:43 - massage chair broked during using.
+18:43 - Monika repaired massage chair
+18:43 - massage chair was repaired by Monika
+18:43 - Monika uses massage chair again.
+18:43 - Having a 'm'sážž' in this fancy massage chair!
+19:05 - Magda wants to do sport.
+19:05 - EquipmentBIKE  was found
+19:05 - Magda is going to use it.
+19:11 - Luk broke washing machine
+19:11 - Yoda broke CD player
+19:11 - Mica broke CoffeeMaker
+19:12 - Stepan wants to do sport.
+19:12 - EquipmentSKI  was found
+19:12 - Stepan is going to use it.
+19:22 - Sensor reacts on SNOW
+19:22 - House temperature increased!
+19:24 - Monika wants to do sport.
+19:24 - EquipmentBIKE  was found
+19:24 - Monika is going to use it.
+19:36 - Magda is using washing machine
+19:36 - washing machine broked during using.
+19:36 - Magda is calling adult to repair it.
+19:36 - All adults are busy -> nobody can repair it now
+19:36 - Magda uses washing machine again.
+19:37 - Magda is using CoffeeMaker
+19:39 - Magda is using fridge
+19:39 - fridge is empty
+19:39 - Magdafound free Car it will take only 5 minutes.
+19:39 - Magdabought food and will fill fridge
+19:43 - Stepan is using massage chair
+19:43 - Having a 'm'sážž' in this fancy massage chair!
+19:45 - Magda wants to do sport.
+19:45 - EquipmentSKI  was found
+19:45 - Magda is going to use it.
+20:12 - Luk broke massage chair
+20:12 - Yoda broke fridge
+20:12 - Mica broke CoffeeMaker
+20:14 - Stepan is using CD player
+20:14 - CD player broked during using.
+20:14 - Stepan is calling adult to repair it.
+20:14 - All adults are busy -> nobody can repair it now
+20:14 - Stepan uses CD player again.
+20:15 - Stepan wants to do sport.
+20:15 - EquipmentSKI  was found
+20:15 - Stepan is going to use it.
+20:16 - Magda takes a nap.
+20:24 - Sensor reacts on SNOW
+20:24 - House temperature increased!
+20:25 - Monika is using fridge
+20:25 - fridge broked during using.
+20:25 - Monika repaired fridge
+20:25 - fridge was repaired by Monika
+20:25 - Monika uses fridge again.
+20:36 - Monika wants to do sport.
+20:36 - EquipmentBIKE  was found
+20:36 - Monika is going to use it.
+20:46 - Stepan takes a nap.
+21:13 - Luk broke washing machine
+21:13 - Yoda broke massage chair
+21:13 - Mica broke TV
+21:17 - Magda wants to do sport.
+21:17 - EquipmentSKI  was found
+21:17 - Magda is going to use it.
+21:26 - Sensor reacts on STORM
+21:26 - Closing all windows and shutting all blinds!
+21:37 - Monika is using CoffeeMaker
+21:37 - CoffeeMaker broked during using.
+21:37 - Monika repaired CoffeeMaker
+21:37 - CoffeeMaker was repaired by Monika
+21:37 - Monika uses CoffeeMaker again.
+21:40 - Monika goes sleep to 8:00 AM
+21:47 - Stepan wants to do sport.
+21:47 - EquipmentSKI  was found
+21:47 - Stepan is going to use it.
+21:48 - Magda goes sleep to 8:00 AM
+22:14 - Luk goes sleep to 8:00 AM
+22:14 - Yoda goes sleep to 8:00 AM
+22:14 - Mica goes sleep to 8:00 AM
+22:18 - Stepan goes sleep to 8:00 AM
+22:28 - Sensor reacts on SUN
+22:28 - Opening all windows, shutting all blinds!
+22:59 - David takes a nap.
+23:30 - Sensor reacts on WIND
+23:30 - Closing all windows!
