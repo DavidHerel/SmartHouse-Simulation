@@ -1,4 +1,4 @@
-# SmartHouse-ONM-TP
+# SmartHouse-Simulation
 
 Simulation of smarthouse
 
