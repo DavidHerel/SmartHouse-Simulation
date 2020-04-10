@@ -1,6 +1,11 @@
 # SmartHouse-ONM-TP
 
-Simulation of smarthouse - Big project
+Simulation of smarthouse
+
+Vytvořit aplikaci pro virtuální simulaci inteligentního domu, kde simulujeme chod domácnosti,
+používáme jednotlivá zařízení domu a vyhodnocujeme využití, spotřebu, volný a pracovní
+čas jednotlivých osob.
+
 
 Term paper for ONM
 
