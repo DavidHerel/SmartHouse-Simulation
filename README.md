@@ -6,17 +6,17 @@ Vytvořit aplikaci pro virtuální simulaci inteligentního domu, kde simulujeme
 používáme jednotlivá zařízení domu a vyhodnocujeme využití, spotřebu, volný a pracovní
 čas jednotlivých osob.
 
-## Design patterny:
-● State machine
-● Iterator
-● Factory/Factory method
-● Decorator/Composite
-● Singleton
-● Visitor/Observer/Listener
-● Chain of responsibility
-● Partially persistent data structure
-● Object Pool
-● Lazy Initialization
+## Použité design patterny:
+- State machine
+- Iterator
+- Factory/Factory method
+- Decorator/Composite
+- Singleton
+- Visitor/Observer/Listener
+- Chain of responsibility
+- Partially persistent data structure
+- Object Pool
+- Lazy Initialization
 
 
 Term paper for ONM
