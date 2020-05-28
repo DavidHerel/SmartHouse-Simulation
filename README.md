@@ -9,6 +9,7 @@ používáme jednotlivá zařízení domu a vyhodnocujeme využití, spotřebu, 
 ## Použité design patterny:
 - State machine
 - Iterator
+- Builder
 - Factory/Factory method
 - Decorator/Composite
 - Singleton
