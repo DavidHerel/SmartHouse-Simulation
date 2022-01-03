@@ -136,7 +136,7 @@ public class MainApi {
     
     
     
-    public void run() throws IOException, InterruptedException{
+    public void run() throws Exception {
         
         Scanner usrInput = new Scanner(System.in);
         char input;
@@ -301,7 +301,7 @@ public class MainApi {
                                 ArrayList<HumanAbility> abilities = new ArrayList<>();
                                 abilities.add(HumanAbility.CAN_REPAIR);
                                 abilities.add(HumanAbility.CAN_SPORT);
-                                people.add(HumanFactory.createHuman("Adult", abilities, br.readLine(), this.house, 10));
+                                people.add(HumanFactory.createHuman("Adult", abilities, br.readLine(), this.house, Integer.parseInt(br.readLine())));
                                 break;
                             }
                         case "K":
@@ -309,7 +309,7 @@ public class MainApi {
                                 ArrayList<HumanAbility> abilities = new ArrayList<>();
                                 abilities = new ArrayList<>();
                                 abilities.add(HumanAbility.CAN_SPORT);
-                                people.add(HumanFactory.createHuman("Kid", abilities, br.readLine(), this.house, 10));
+                                people.add(HumanFactory.createHuman("Kid", abilities, br.readLine(), this.house, Integer.parseInt(br.readLine())));
                                 break;
                             }
                         case "D":

@@ -71,7 +71,7 @@ public class HumanApiTest {
      * Test of repairAppliance method, of class HumanApi.
      */
     @Test
-    public void testRepairAppliance() {
+    public void testRepairAppliance() throws Exception {
         System.out.println("repairAppliance");
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
@@ -88,7 +88,7 @@ public class HumanApiTest {
      * Test of doSport method, of class HumanApi.
      */
     @Test
-    public void testDoSport() {
+    public void testDoSport() throws Exception {
         System.out.println("DoSport");
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
