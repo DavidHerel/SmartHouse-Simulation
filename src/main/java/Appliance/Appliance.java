@@ -41,7 +41,7 @@ public abstract class Appliance implements Measurable{
         if(workTime < 0){
             throw new Exception("Work time can not be negative");
         }
-        if (name.equals("") || name.length() > 30){
+        if (name.equals("") || name.length() > 20){
             throw new Exception("Empty or too long name");
         }
         this.name = name;
