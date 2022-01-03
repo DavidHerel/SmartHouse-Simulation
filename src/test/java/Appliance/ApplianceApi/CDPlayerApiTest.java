@@ -21,34 +21,14 @@ import static org.junit.Assert.*;
  * @author fuji
  */
 public class CDPlayerApiTest {
-    
-    public CDPlayerApiTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
 
     /**
      * Test of broken method, of class CDPlayerApi.
      */
     @Test
-    public void testBroken() {
+    public void testBroken() throws Exception {
         System.out.println("broken");
-        Appliance app = new CDPlayer(5, new Documentation(45), 0);
+        Appliance app = new CDPlayer(5, new Documentation(45), 0, "Samsung");
         CDPlayerApi instance = new CDPlayerApi();
         int expResult = instance.broken(app);
         assertEquals(expResult, -4);

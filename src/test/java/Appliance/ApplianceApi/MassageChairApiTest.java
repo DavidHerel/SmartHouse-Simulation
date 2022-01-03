@@ -46,9 +46,9 @@ public class MassageChairApiTest {
      * Test of work method, of class MassageChairApi.
      */
     @Test
-    public void testWork() {
+    public void testWork() throws Exception {
         System.out.println("work");
-        Appliance app = new MassageChair(5, new Documentation(100), 0);
+        Appliance app = new MassageChair(5, new Documentation(100), 0, "Aas");
         MassageChairApi instance = new MassageChairApi();
         int expResult = instance.work(app);
         assertEquals(expResult, 30);
@@ -57,9 +57,9 @@ public class MassageChairApiTest {
      * Test of broken method, of class MassageChairApi.
      */
     @Test
-    public void testBroken() {
+    public void testBroken() throws Exception {
         System.out.println("broken");
-        Appliance app = new MassageChair(5, new Documentation(100), 0);
+        Appliance app = new MassageChair(5, new Documentation(100), 0, "Aas");
         MassageChairApi instance = new MassageChairApi();
         int expResult = instance.broken(app);
         assertEquals(expResult, -1);

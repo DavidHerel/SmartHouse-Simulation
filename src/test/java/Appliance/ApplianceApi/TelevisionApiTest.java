@@ -46,9 +46,9 @@ public class TelevisionApiTest {
      * Test of broken method, of class TelevisionApi.
      */
     @Test
-    public void testBroken() {
+    public void testBroken() throws Exception {
         System.out.println("broken");
-        Appliance app = new Television(5, new Documentation(100), 0);
+        Appliance app = new Television(5, new Documentation(100), 0, "Aas");
         TelevisionApi instance = new TelevisionApi();
         int expResult = instance.broken(app);
         assertEquals(expResult, -10);

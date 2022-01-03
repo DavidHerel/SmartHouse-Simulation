@@ -18,8 +18,8 @@ public class Television extends Appliance implements ConsumesOnUseOnly{
 
     private int energyConsumed;
     
-    public Television(int brokenProb, Documentation documentation, int workTime) {
-        super(brokenProb, documentation, workTime);
+    public Television(int brokenProb, Documentation documentation, int workTime, String name) throws Exception {
+        super(brokenProb, documentation, workTime, name);
     }
 
     @Override

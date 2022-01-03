@@ -24,8 +24,8 @@ public class Fridge extends Appliance{
     private int brokenTime;
     private ArrayList<Food> food;
 
-    public Fridge(int brokenProb, Documentation documentation, int workTime) {
-        super(brokenProb, documentation, workTime);
+    public Fridge(int brokenProb, Documentation documentation, int workTime, String name) throws Exception {
+        super(brokenProb, documentation, workTime, name);
         lastCheckTime = MainApi.getApi().getTime();
         this.food = new ArrayList<>();
         busyTime = 0;

@@ -43,7 +43,7 @@ public class SensorApiTest {
      * Test of doRandomStuff method, of class PetApi.
      */
     @Test
-    public void testReactToStorm() {
+    public void testReactToStorm() throws Exception {
         System.out.println("Testing method: reactToEvent");
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);

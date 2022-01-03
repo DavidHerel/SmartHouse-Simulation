@@ -46,9 +46,9 @@ public class CoffeeMakerApiTest {
      * Test of work method, of class CoffeeMakerApi.
      */
     @Test
-    public void testWork() {
+    public void testWork() throws Exception {
         System.out.println("work");
-        Appliance app = new CoffeeMaker(5, new Documentation(45), 0);
+        Appliance app = new CoffeeMaker(5, new Documentation(45), 0, "Aas");
         CoffeeMakerApi instance = new CoffeeMakerApi();
         int expResult = instance.work(app);
         assertEquals(expResult, 1);
@@ -57,9 +57,9 @@ public class CoffeeMakerApiTest {
      * Test of broken method, of class CoffeeMakerApi.
      */
     @Test
-    public void testBroken() {
+    public void testBroken() throws Exception {
         System.out.println("broken");
-        Appliance app = new CoffeeMaker(5, new Documentation(45), 0);
+        Appliance app = new CoffeeMaker(5, new Documentation(45), 0, "Aas");
         CoffeeMakerApi instance = new CoffeeMakerApi();
         int expResult = instance.broken(app);
         assertEquals(expResult, -1);

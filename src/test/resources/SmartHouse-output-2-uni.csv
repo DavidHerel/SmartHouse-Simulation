@@ -5,15 +5,15 @@
 # Maximum number of values per parameter: 4
 # Number of configurations: 12
 Name,Age,Gender
--,24,-
-David,140,-
-Mojejmenojedelsinez20,-8,-
--,140,Male
+"",24,""
+David,140,""
+Mojejmenojedelsinez20,-8,""
+"",140,Male
 David,-8,Male
 Mojejmenojedelsinez20,24,Male
--,-8,Female
+"",-8,Female
 David,24,Female
 Mojejmenojedelsinez20,140,Female
--,-8,Dolphin
+"",-8,Dolphin
 David,24,Dolphin
 Mojejmenojedelsinez20,140,Dolphin

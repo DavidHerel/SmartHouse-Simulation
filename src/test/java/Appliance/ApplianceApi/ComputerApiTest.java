@@ -46,9 +46,9 @@ public class ComputerApiTest {
      * Test of work method, of class ComputerApi.
      */
     @Test
-    public void testWork() {
+    public void testWork() throws Exception {
         System.out.println("work");
-        Appliance app = new Computer(5, new Documentation(100), 0);
+        Appliance app = new Computer(5, new Documentation(100), 0, "Aas");
         ComputerApi instance = new ComputerApi();
         int expResult = instance.work(app);
         assertEquals(expResult, 24*60);
@@ -57,9 +57,9 @@ public class ComputerApiTest {
      * Test of broken method, of class ComputerApi.
      */
     @Test
-    public void testBroken() {
+    public void testBroken() throws Exception {
         System.out.println("broken");
-        Appliance app = new Computer(5, new Documentation(100), 0);
+        Appliance app = new Computer(5, new Documentation(100), 0, "Aas");
         ComputerApi instance = new ComputerApi();
         int expResult = instance.broken(app);
         assertEquals(expResult, -100);

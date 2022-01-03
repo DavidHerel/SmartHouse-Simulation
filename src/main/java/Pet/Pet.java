@@ -22,6 +22,8 @@ import java.util.Collections;
  */
 public class Pet {
 
+    private final Integer age;
+
     public void setName(String name) {
         this.name = name;
     }
@@ -61,7 +63,13 @@ public class Pet {
         return house;
     }
 
-    public Pet(String name, PetType petType, House House) {
+    public Pet(String name, PetType petType, House House, Integer age) throws Exception {
+        if (name.equals("") || name.length() > 20) {
+            throw new Exception("Empty name or longer than 20 characters");
+        }
+        if (age < 0 || age > 120){
+            throw new Exception("Age is less than 0 or higher than 120");
+        }
         this.name = name;
         this.petType = petType;
         this.house = House;
@@ -69,6 +77,37 @@ public class Pet {
         numberTillExhausted = 0;
         this.state = new StateFresh(this);
         this.busyTime = 0;
+        this.age = age;
+    }
+
+    public Pet(String name, String petType, House House, Integer age) throws Exception {
+        if (name.equals("") || name.length() > 20) {
+            throw new Exception("Empty name or longer than 20 characters");
+        }
+        if (age < 0 || age > 120){
+            throw new Exception("Age is less than 0 or higher than 120");
+        }
+        this.name = name;
+        if (petType.equals("Dog")){
+            this.petType = PetType.DOG;
+        }
+        else if  (petType.equals("Cat")){
+            this.petType = PetType.CAT;
+        }
+        else if  (petType.equals("Monkey")){
+            this.petType = PetType.MONKEY;
+        }
+        else if (petType.equals("Allien")){
+            this.petType = PetType.ALIEN;
+        }else{
+            throw new Exception("Invalid pet type");
+        }
+        this.house = House;
+        api = new PetApi(this);
+        numberTillExhausted = 0;
+        this.state = new StateFresh(this);
+        this.busyTime = 0;
+        this.age = age;
     }
 
     public PetState getState() {

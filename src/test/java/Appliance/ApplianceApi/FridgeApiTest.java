@@ -48,9 +48,9 @@ public class FridgeApiTest {
      * Test of broken method, of class FridgeApi.
      */
     @Test
-    public void testBroken() {
+    public void testBroken() throws Exception {
         System.out.println("broken");
-        Appliance app = new Fridge(5, new Documentation(100), 0);
+        Appliance app = new Fridge(5, new Documentation(100), 0, "Aas");
         FridgeApi instance = new FridgeApi();
         int expResult = instance.broken(app);
         assertEquals(expResult, -15);

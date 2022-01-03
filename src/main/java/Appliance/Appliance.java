@@ -17,7 +17,8 @@ import House.Measurable;
  * @author Fuji
  */
 public abstract class Appliance implements Measurable{
-    
+
+    private final String name;
     int brokenProb; //broken probabilty
 
     public void setBrokenProb(int brokenProb) {
@@ -30,7 +31,20 @@ public abstract class Appliance implements Measurable{
     int busyTime;
     
     
-    public Appliance(int brokenProb, Documentation documentation, int workTime) {
+    public Appliance(int brokenProb, Documentation documentation, int workTime, String name) throws Exception {
+        if(brokenProb < 0 || brokenProb > 100){
+            throw new Exception("Probability can not be negative or higher than 100%");
+        }
+        if (documentation.getRepairTime() < 0){
+            throw new Exception("Repair time can not be negative");
+        }
+        if(workTime < 0){
+            throw new Exception("Work time can not be negative");
+        }
+        if (name.equals("") || name.length() > 30){
+            throw new Exception("Empty or too long name");
+        }
+        this.name = name;
         this.brokenProb = brokenProb;
         this.documentation = documentation;
         this.workTime = workTime;

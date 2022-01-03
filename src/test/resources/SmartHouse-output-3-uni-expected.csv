@@ -1,0 +1,43 @@
+# ACTS Test Suite Generation: Mon Jan 03 13:33:29 CET 2022
+#  '*' represents don't care value 
+# Degree of interaction coverage: 3
+# Number of parameters: 3
+# Maximum number of values per parameter: 4
+# Number of configurations: 36
+Name,Age,Gender
+"",-8,"",Exception
+"",24,"",Exception
+"",140,"",Exception
+David,-8,"",Exception
+David,24,"",Exception
+David,140,"",Exception
+Mojejmenojedelsinez20,-8,"",Exception
+Mojejmenojedelsinez20,24,"",Exception
+Mojejmenojedelsinez20,140,"",Exception
+"",-8,Male,Exception
+"",24,Male,Exception
+"",140,Male,Exception
+David,-8,Male,Exception
+David,24,Male,success
+David,140,Male,Exception
+Mojejmenojedelsinez20,-8,Male,Exception
+Mojejmenojedelsinez20,24,Male,Exception
+Mojejmenojedelsinez20,140,Male,Exception
+"",-8,Female,Exception
+"",24,Female,Exception
+"",140,Female,Exception
+David,-8,Female,Exception
+David,24,Female,success
+David,140,Female,Exception
+Mojejmenojedelsinez20,-8,Female,Exception
+Mojejmenojedelsinez20,24,Female,Exception
+Mojejmenojedelsinez20,140,Female,Exception
+"",-8,Dolphin,Exception
+"",24,Dolphin,Exception
+"",140,Dolphin,Exception
+David,-8,Dolphin,Exception
+David,24,Dolphin,Exception
+David,140,Dolphin,Exception
+Mojejmenojedelsinez20,-8,Dolphin,Exception
+Mojejmenojedelsinez20,24,Dolphin,Exception
+Mojejmenojedelsinez20,140,Dolphin,Exception

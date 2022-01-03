@@ -202,11 +202,11 @@ public class MainApi {
                     break;
                 case 'D':
                     System.out.println("Enter your dog's name.");
-                    pets.add(new Pet(br.readLine(), PetType.DOG, house));
+                    pets.add(new Pet(br.readLine(), PetType.DOG, house, 10));
                     break;
                 case 'C':
                     System.out.println("Enter your cat's name.");
-                    pets.add(new Pet(br.readLine(), PetType.CAT, house));
+                    pets.add(new Pet(br.readLine(), PetType.CAT, house, 10));
                     break;
                 case 'X':
                     break makingpeople;
@@ -313,10 +313,10 @@ public class MainApi {
                                 break;
                             }
                         case "D":
-                            pets.add(new Pet(br.readLine(), PetType.DOG, house));
+                            pets.add(new Pet(br.readLine(), PetType.DOG, house, 10));
                             break;
                         case "C":
-                            pets.add(new Pet(br.readLine(), PetType.CAT, house));
+                            pets.add(new Pet(br.readLine(), PetType.CAT, house, 10));
                             break;
                         case "X":
                             break OUTER;

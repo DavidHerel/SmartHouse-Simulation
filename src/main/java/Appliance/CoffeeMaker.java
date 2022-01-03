@@ -20,8 +20,8 @@ public class CoffeeMaker extends Appliance implements ConsumesOnUseOnly{
     
     private int energyConsumed;
 
-    public CoffeeMaker(int brokenProb, Documentation documentation, int workTime) {
-        super(brokenProb, documentation, workTime);
+    public CoffeeMaker(int brokenProb, Documentation documentation, int workTime, String name) throws Exception {
+        super(brokenProb, documentation, workTime, name);
         busyTime = 0;
         energyConsumed = 0;
     }

@@ -18,8 +18,8 @@ public class Xbox extends Appliance implements ConsumesOnUseOnly{
 
     private int energyConsumed;
 
-    public Xbox(int brokenProb, Documentation documentation, int workTime) {
-        super(brokenProb, documentation, workTime);
+    public Xbox(int brokenProb, Documentation documentation, int workTime, String name) throws Exception {
+        super(brokenProb, documentation, workTime, name);
         this.energyConsumed = 0;
     }
 

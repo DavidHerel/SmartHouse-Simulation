@@ -19,9 +19,9 @@ import java.util.ArrayList;
  */
 public abstract class HouseBuilder {
     
-    public abstract House buildHouse(MainApi api);
+    public abstract House buildHouse(MainApi api) throws Exception;
     
-    abstract ArrayList<Room> createRooms();
+    abstract ArrayList<Room> createRooms() throws Exception;
     abstract ArrayList<Window> createWindows();
     abstract ArrayList<Equipment> createEquipment();
 }

@@ -15,47 +15,34 @@ import House.House;
 import Pet.Pet;
 import Pet.PetType;
 import Room.Room;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ArgumentsSource;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
  * @author fuji
  */
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class PetApiTest {
-    
-    public PetApiTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
 
     /**
      * Test of doRandomStuff method, of class PetApi.
      */
     @Test
-    public void testDoRandomStuff() {
+    @Order(1)
+    public void testDoRandomStuff() throws Exception {
         System.out.println("Testing method: doRandomStuff");
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
-        Pet pet = new Pet("Luk", PetType.DOG, house);
+        Pet pet = new Pet("Luk", PetType.DOG, house, 10);
         //breaks one appliance
         pet.getApi().doRandomStuff();
         for (Room room : house.getRooms()){
@@ -63,7 +50,7 @@ public class PetApiTest {
                 
                 //should find one  broken appliance
                 if (appliance.getState().getClass().equals((new StateBroken(appliance)).getClass())){
-                    assertEquals(new StateBroken(appliance).getClass(), appliance.getState().getClass());
+                    assertEquals("Has to equal",new StateBroken(appliance).getClass(), appliance.getState().getClass());
                 }
             }
         }
@@ -73,40 +60,80 @@ public class PetApiTest {
      * Test of findRandomRoomWithAppliance method, of class PetApi.
      */
     @Test
-    public void testFindRandomRoomWithAppliance() {
+    @Order(2)
+    public void testFindRandomRoomWithAppliance() throws Exception {
         System.out.println("findRandomRoomWithAppliance");
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
-        Pet pet = new Pet("Luk", PetType.DOG, house);
+        Pet pet = new Pet("Luk", PetType.DOG, house, 10);
         PetApi ap = new PetApi(pet);
         Room instance = ap.findRandomRoomWithAppliance();
-        assertTrue("Has to be greater than 0", instance.getAppliance().size() > 0);
+        assertTrue("Has to be greater than 0",instance.getAppliance().size() > 0);
     }
 
     /**
      * Test of goSleep method, of class PetApi.
      */
     @Test
-    public void testGoSleep() {
+    @Order(3)
+    public void testGoSleep() throws Exception {
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
-        Pet pet = new Pet("Luk", PetType.DOG, house);
+        Pet pet = new Pet("Luk", PetType.DOG, house, 10);
         PetApi ap = new PetApi(pet);
         ap.goSleep();
-        assertTrue("Has to be greater than 0", pet.getBusyTime() > 0);
+        assertTrue("Has to be greater than 0",pet.getBusyTime() > 0);
     }
 
     /**
      * Test of slaveTheHumanRace method, of class PetApi.
      */
     @Test
-    public void testSlaveTheHumanRace() {
+    @Order(4)
+    public void testSlaveTheHumanRace() throws Exception {
         System.out.println("slaveTheHumanRace");
-                MainApi api = MainApi.getApi();
+        MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
-                Pet pet = new Pet("Luk", PetType.DOG, house);
+        Pet pet = new Pet("Luk", PetType.DOG, house, 10);
         PetApi instance = new PetApi(pet);
         instance.slaveTheHumanRace();
     }
+
+    @ParameterizedTest
+    @CsvSource(value = {
+            //SUCCESS
+            "Luk;Dog;14;success",
+            "Las Des;Allien;23;success",
+            "Vlasta Emre;Monkey;11;success",
+            "Katua Kerem;Cat;3;success",
+            "Kris Ott;Dog;9;success",
+
+            //Exception
+            //empty name and invalidt age
+            ";Cat;150;Exception",
+            //long name and invalid age
+            "Hodne dlouhe jmeno snad je to uz dost;Dog;420;Exception",
+            //wrong pet type and empty full name
+            ";Parrot;28;Exception",
+            //Negative age and pet type
+            "Bobisek;Rhino;-4;Exception",
+            //empty pet type name
+            "Lucino;;45;Exception"
+    }, delimiter = ';')
+    @Order(5)
+    void testLoadParametrizedPet(String name, String petType, Integer age, String expected) throws Exception {
+        MainApi api = MainApi.getApi();
+        House house = new FamilyHouseBuilder().buildHouse(api);
+        if (expected.equals("Exception")) {
+            Exception ex = assertThrows(Exception.class, () -> {
+                Pet pet = new Pet(name, petType, house, age);
+            }, "Exception was not trown");
+        } if (expected.equals("success")) {
+            assertDoesNotThrow(() -> {
+                Pet pet = new Pet(name, petType, house, age);
+            });
+        }
+    }
+
     
 }

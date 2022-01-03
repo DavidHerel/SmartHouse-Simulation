@@ -21,43 +21,29 @@ import Pet.PetType;
 import PetApi.PetApi;
 import Room.Room;
 import java.util.ArrayList;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ArgumentsSource;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
  * @author fuji
  */
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class HumanApiTest {
-    
-    public HumanApiTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-    
     /**
      * Test of goSleep method, of class HumanApi.
      */
     @Test
-    public void testGoSleep() {
+    @Order(1)
+    public void testGoSleep() throws Exception {
         System.out.println("goSleep");
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
@@ -71,6 +57,7 @@ public class HumanApiTest {
      * Test of repairAppliance method, of class HumanApi.
      */
     @Test
+    @Order(2)
     public void testRepairAppliance() throws Exception {
         System.out.println("repairAppliance");
         MainApi api = MainApi.getApi();
@@ -78,8 +65,8 @@ public class HumanApiTest {
         ArrayList<HumanAbility> abilities = new ArrayList<>();
         abilities.add(HumanAbility.CAN_REPAIR);
         abilities.add(HumanAbility.CAN_SPORT);
-        Human david = HumanFactory.createHuman("Adult", abilities, "David", house, 10, "male");
-        Appliance apl = new CoffeeMaker(1, new Documentation(5), 1);
+        Human david = HumanFactory.createHuman("Adult", abilities, "David", house, 10, "Male");
+        Appliance apl = new CoffeeMaker(1, new Documentation(5), 1, "Aas");
         david.getApi().repairAppliance(apl);
         assertTrue("Greater than 0", david.getBusyTime() > 0);
     }
@@ -88,6 +75,7 @@ public class HumanApiTest {
      * Test of doSport method, of class HumanApi.
      */
     @Test
+    @Order(3)
     public void testDoSport() throws Exception {
         System.out.println("DoSport");
         MainApi api = MainApi.getApi();
@@ -95,7 +83,7 @@ public class HumanApiTest {
         ArrayList<HumanAbility> abilities = new ArrayList<>();
         abilities.add(HumanAbility.CAN_REPAIR);
         abilities.add(HumanAbility.CAN_SPORT);
-        Human david = HumanFactory.createHuman("Adult", abilities, "David", house, 10, "male");
+        Human david = HumanFactory.createHuman("Adult", abilities, "David", house, 10, "Male");
         
         david.getApi().doSport();
         assertTrue("BusyTime (" + david.getBusyTime() + ") should be  60 (" + 60 + ")", david.getBusyTime() == 60);
@@ -105,7 +93,8 @@ public class HumanApiTest {
      * Test of findRandomRoomWithAppliance method, of class HumanApi.
      */
     @Test
-    public void testFindRandomRoomWithAppliance() {
+    @Order(4)
+    public void testFindRandomRoomWithAppliance() throws Exception {
         System.out.println("findRandomRoomWithAppliance");
         System.out.println("findRandomRoomWithAppliance");
         MainApi api = MainApi.getApi();
@@ -120,7 +109,8 @@ public class HumanApiTest {
      * Test of findRandomFreeAppliance method, of class HumanApi.
      */
     @Test
-    public void testFindRandomFreeAppliance() {
+    @Order(5)
+    public void testFindRandomFreeAppliance() throws Exception {
         System.out.println("findRandomFreeAppliance");
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
@@ -129,6 +119,24 @@ public class HumanApiTest {
         Room instance = ap.findRandomRoomWithAppliance();
         Appliance app = ap.findRandomFreeAppliance(instance.getAppliance());
         assertTrue("Has to be 0", app.getBusyTime() == 0);
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/SmartHouse-output-2-uni-expected.csv", numLinesToSkip = 1)
+    @Order(6)
+    public void testLoadfromCSVHuman(String name, Integer age, String gender, String expected) throws Exception {
+        MainApi api = MainApi.getApi();
+        House house = new FamilyHouseBuilder().buildHouse(api);
+        if (expected.equals("Exception")) {
+            Exception ex = assertThrows(Exception.class, () -> {
+                Human human = HumanFactory.createHuman("Kid", null, name, house, age, gender);
+            }, "Exception was not trown");
+        } if (expected.equals("success")) {
+            assertDoesNotThrow(() -> {
+                Human human = HumanFactory.createHuman("Kid", null, name, house, age, gender);
+            });
+        }
+
     }
 
 

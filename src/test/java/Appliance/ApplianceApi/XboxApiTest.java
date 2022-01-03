@@ -46,9 +46,9 @@ public class XboxApiTest {
      * Test of broken method, of class XboxApi.
      */
     @Test
-    public void testBroken() {
+    public void testBroken() throws Exception {
         System.out.println("broken");
-        Appliance app = new Xbox(5, new Documentation(100), 0);
+        Appliance app = new Xbox(5, new Documentation(100), 0, "Aas");
         XboxApi instance = new XboxApi();
         int expResult = instance.broken(app);
         assertEquals(expResult, -20);

@@ -47,9 +47,9 @@ public class WashingMachineApiTest {
      * Test of work method, of class WashingMachineApi.
      */
     @Test
-    public void testWork() {
+    public void testWork() throws Exception {
         System.out.println("work");
-        Appliance app = new WashingMachine(5, new Documentation(100), 0);
+        Appliance app = new WashingMachine(5, new Documentation(100), 0, "Aas");
         WashingMachineApi instance = new WashingMachineApi();
         int expResult = instance.work(app);
         assertEquals(expResult, 10);
@@ -58,9 +58,9 @@ public class WashingMachineApiTest {
      * Test of broken method, of class MassageChairApi.
      */
     @Test
-    public void testBroken() {
+    public void testBroken() throws Exception {
         System.out.println("broken");
-        Appliance app = new MassageChair(5, new Documentation(100), 0);
+        Appliance app = new WashingMachine(5, new Documentation(100), 0, "Aas");
         WashingMachineApi instance = new WashingMachineApi();
         int expResult = instance.broken(app);
         assertEquals(expResult, -10);
