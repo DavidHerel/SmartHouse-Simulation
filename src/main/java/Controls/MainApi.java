@@ -188,13 +188,13 @@ public class MainApi {
                     ArrayList<HumanAbility> abilities = new ArrayList<>();
                     abilities.add(HumanAbility.CAN_REPAIR);
                     abilities.add(HumanAbility.CAN_SPORT);
-                    people.add(HumanFactory.createHuman("Adult", abilities, br.readLine(), this.house));
+                    people.add(HumanFactory.createHuman("Adult", abilities, br.readLine(), this.house, 10));
                     break;
                 case 'K':
                     System.out.println("Enter your kid's name.");
                     abilities = new ArrayList<>();
                     abilities.add(HumanAbility.CAN_SPORT);
-                    people.add(HumanFactory.createHuman("Kid", abilities, br.readLine(), this.house));
+                    people.add(HumanFactory.createHuman("Kid", abilities, br.readLine(), this.house, 10));
                     break;
                 case 'H':
                     System.out.println("PIZDIEC!");
@@ -301,7 +301,7 @@ public class MainApi {
                                 ArrayList<HumanAbility> abilities = new ArrayList<>();
                                 abilities.add(HumanAbility.CAN_REPAIR);
                                 abilities.add(HumanAbility.CAN_SPORT);
-                                people.add(HumanFactory.createHuman("Adult", abilities, br.readLine(), this.house));
+                                people.add(HumanFactory.createHuman("Adult", abilities, br.readLine(), this.house, 10));
                                 break;
                             }
                         case "K":
@@ -309,7 +309,7 @@ public class MainApi {
                                 ArrayList<HumanAbility> abilities = new ArrayList<>();
                                 abilities = new ArrayList<>();
                                 abilities.add(HumanAbility.CAN_SPORT);
-                                people.add(HumanFactory.createHuman("Kid", abilities, br.readLine(), this.house));
+                                people.add(HumanFactory.createHuman("Kid", abilities, br.readLine(), this.house, 10));
                                 break;
                             }
                         case "D":
@@ -321,7 +321,7 @@ public class MainApi {
                         case "X":
                             break OUTER;
                         default:
-                            break;
+                            throw new Exception("Invalid starting char in input file");
                     }
                 }
             }
@@ -354,6 +354,8 @@ public class MainApi {
                 }
             }
             
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

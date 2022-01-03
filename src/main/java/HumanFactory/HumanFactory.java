@@ -36,12 +36,12 @@ public class HumanFactory {
      * @param abilities
      * @return 
      */
-    public static Human createHuman(String type, ArrayList<HumanAbility> abilities, String name, House house){
+    public static Human createHuman(String type, ArrayList<HumanAbility> abilities, String name, House house, Integer age){
         if ("Adult".equalsIgnoreCase(type)){
-            return new Adult(abilities, name, house);
+            return new Adult(abilities, name, house, age);
             
         } else if ("Kid".equalsIgnoreCase(type)){
-            return new Kid(abilities, name, house);
+            return new Kid(abilities, name, house, age);
         }
         return null; 
     }

@@ -20,7 +20,8 @@ import java.util.Collections;
  * @author fuji
  */
 public abstract class Human {
-    
+
+    private final Integer age;
     HumanState state;
 
     public void setAbilities(ArrayList<HumanAbility> abilities) {
@@ -59,7 +60,7 @@ public abstract class Human {
         return api;
     }
 
-    public Human(ArrayList<HumanAbility> abilities, String name, House house) {
+    public Human(ArrayList<HumanAbility> abilities, String name, House house, Integer age) {
         this.busyTime = 0;
         this.state = new StateFresh(this);
         this.abilities = abilities;
@@ -68,6 +69,7 @@ public abstract class Human {
         this.api = new HumanApi(this);
         numberTillExhausted = 0;
         action = new CurrentAction("Does nothing");
+        this.age = age;
     }
 
     public CurrentAction getAction() {
