@@ -1,0 +1,43 @@
+# ACTS Test Suite Generation: Mon Jan 03 13:33:29 CET 2022
+#  '*' represents don't care value 
+# Degree of interaction coverage: 3
+# Number of parameters: 3
+# Maximum number of values per parameter: 4
+# Number of configurations: 36
+Name,Age,Gender
+-,-8,-
+-,24,-
+-,140,-
+David,-8,-
+David,24,-
+David,140,-
+Mojejmenojedelsinez20,-8,-
+Mojejmenojedelsinez20,24,-
+Mojejmenojedelsinez20,140,-
+-,-8,Male
+-,24,Male
+-,140,Male
+David,-8,Male
+David,24,Male
+David,140,Male
+Mojejmenojedelsinez20,-8,Male
+Mojejmenojedelsinez20,24,Male
+Mojejmenojedelsinez20,140,Male
+-,-8,Female
+-,24,Female
+-,140,Female
+David,-8,Female
+David,24,Female
+David,140,Female
+Mojejmenojedelsinez20,-8,Female
+Mojejmenojedelsinez20,24,Female
+Mojejmenojedelsinez20,140,Female
+-,-8,Dolphin
+-,24,Dolphin
+-,140,Dolphin
+David,-8,Dolphin
+David,24,Dolphin
+David,140,Dolphin
+Mojejmenojedelsinez20,-8,Dolphin
+Mojejmenojedelsinez20,24,Dolphin
+Mojejmenojedelsinez20,140,Dolphin

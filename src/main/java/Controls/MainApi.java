@@ -217,7 +217,7 @@ public class MainApi {
         
         this.time = 0;
         createTransport();
-        event = new RandomEvent(RandomEventType.WIND, house);
+        event = new RandomEvent(RandomEventType.WIND, house, 10);
         System.out.println("For testing press 'Y', for simulation press anything else.");
         if((input = usrInput.next().charAt(0)) == 'Y'){
             simulation: while(true){
@@ -327,15 +327,15 @@ public class MainApi {
             }
             this.time = 0;
             createTransport();
-            event = new RandomEvent(RandomEventType.WIND, house);
+            event = new RandomEvent(RandomEventType.WIND, house, 10);
             time = 480; //simulation starts at 8:00 am - 1 time unit equals 1 minute
             //MAIN SIMULATION LOOP HERE
             
             while(true){
               //  System.out.println("The time is: "+getDayTime());
-                
+
                 checkEvents();
-                checkPeople();                
+                checkPeople();
                 checkPets();
                 checkAppliance();
                 checkMachines();

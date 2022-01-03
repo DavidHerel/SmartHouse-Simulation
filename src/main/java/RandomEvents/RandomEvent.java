@@ -17,6 +17,7 @@ import java.util.Arrays;
  * @author fuji
  */
 public class RandomEvent {
+    private final Integer strength;
     RandomEventType event;
     RandomEventsApi api;
 
@@ -50,12 +51,13 @@ public class RandomEvent {
         this.state = state;
     }
 
-    public RandomEvent(RandomEventType event, House house) {
+    public RandomEvent(RandomEventType event, House house, Integer strength) {
         this.event = event;
         this.house = house;
         this.busyTime = 0;
         this.api = new RandomEventsApi(this);
         this.state = new StateActive(this);
+        this.strength = strength;
         numberTillInactive = 0;
     }
 

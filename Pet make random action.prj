@@ -1,0 +1,1646 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project description="" id="1" linkage="" name="Pet make random action" version="">
+    <graphs>
+        <graph description="" id="6" linkage="" name="Pet make random action" type="ACTIVITY_DIAGRAM" version="">
+            <node description="" height="70.0" id="4" name="Find random room &#10;with appliance&#10;" priority="" style="STYLE_ACTIVITY_NODE" width="130.0" xpos="0.0" ypos="140.0"/>
+            <edge description="" id="7" name="2" priority="" source="4" target="6"/>
+            <node description="" height="50.0" id="6" name="Check if&#10;exists" priority="" style="STYLE_ACTIVITY_DECISION" width="60.0" xpos="110.0" ypos="250.0"/>
+            <edge description="" id="9" name="No1" priority="" source="6" target="8"/>
+            <edge description="" id="11" name="Yes3" priority="" source="6" target="10"/>
+            <node description="" height="35.0" id="8" name="END C" priority="" style="STYLE_ACTIVITY_END" width="35.0" xpos="340.0" ypos="80.0"/>
+            <node description="" height="40.0" id="10" name="Get its state" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="100.0" ypos="320.0"/>
+            <edge description="" id="13" name="5" priority="" source="10" target="12"/>
+            <node description="" height="60.0" id="12" name="Check if &#10;its broken&#10;" priority="" style="STYLE_ACTIVITY_DECISION" width="60.0" xpos="0.0" ypos="360.0"/>
+            <edge description="" id="14" name="Yes2" priority="" source="12" target="4"/>
+            <edge description="" id="16" name="No2" priority="" source="12" target="15"/>
+            <node description="" height="40.0" id="15" name="Break it&#10;" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="160.0" ypos="410.0"/>
+            <edge description="" id="24" name="10" priority="" source="15" target="17"/>
+            <node description="" height="50.0" id="17" name="Increase exhausted&#10;status" priority="" style="STYLE_ACTIVITY_NODE" width="110.0" xpos="310.0" ypos="380.0"/>
+            <edge description="" id="26" name="11" priority="" source="17" target="25"/>
+            <node description="" height="60.0" id="18" name="Check if&#10;exhausted" priority="" style="STYLE_ACTIVITY_DECISION" width="50.0" xpos="80.0" ypos="50.0"/>
+            <edge description="" id="19" name="No" priority="" source="18" target="4"/>
+            <edge description="" id="23" name="Yes1&#10;" priority="" source="18" target="21"/>
+            <node description="" height="25.0" id="21" name="START" priority="" style="STYLE_ACTIVITY_START" width="25.0" xpos="90.0" ypos="0.0"/>
+            <edge description="" id="22" name="9" priority="" source="21" target="18"/>
+            <node description="" height="40.0" id="25" name="Gather report" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="420.0" ypos="270.0"/>
+            <edge description="" id="27" name="12" priority="" source="25" target="8"/>
+            <test_case changed="false" combinations_data_rows="10" graph_id="6" name="Test situations 1, TDL= 1, ALG= PCT." note="" test_situations_data_rows="3">
+                <combinations_data_value col="0" selected_row="0">Check if
+exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase exhausted
+status</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">START</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Yes1
+
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Get its state</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">Yes3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Check if
+exhausted</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">9
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Break it
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">No2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">END C</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">No1
+12
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="7">Check if 
+its broken
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="7">5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="8">Gather report</combinations_data_value>
+                <combinations_data_value col="1" selected_row="8">11
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="9">Find random room 
+with appliance
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="9">Yes2
+No
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="16" name="No2"/>
+                    <value edge_id="24" name="10"/>
+                    <value edge_id="26" name="11"/>
+                    <value edge_id="27" name="12"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="10" graph_id="6" name="Test situations 2, TDL= 1, ALG= PCT." note="" test_situations_data_rows="3">
+                <combinations_data_value col="0" selected_row="0">Check if
+exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase exhausted
+status</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">START</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Yes1
+
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Get its state</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">Yes3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Check if
+exhausted</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">9
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Break it
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">No2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">END C</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">No1
+12
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="7">Check if 
+its broken
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="7">5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="8">Gather report</combinations_data_value>
+                <combinations_data_value col="1" selected_row="8">11
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="9">Find random room 
+with appliance
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="9">Yes2
+No
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="16" name="No2"/>
+                    <value edge_id="24" name="10"/>
+                    <value edge_id="26" name="11"/>
+                    <value edge_id="27" name="12"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="9" graph_id="6" name="Test situations 3, TDL= 2, ALG= PCT." note="" test_situations_data_rows="3">
+                <combinations_data_value col="0" selected_row="0">Check if
+exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2 - No1
+2 - Yes3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase exhausted
+status</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">10 - 11
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">START</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Yes1
+ - 9
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Get its state</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">Yes3 - 5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Check if
+exhausted</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">9 - No
+9 - Yes1
+
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Break it
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">No2 - 10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">Check if 
+its broken
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">5 - Yes2
+5 - No2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="7">Gather report</combinations_data_value>
+                <combinations_data_value col="1" selected_row="7">11 - 12
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="8">Find random room 
+with appliance
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="8">Yes2 - 2
+No - 2
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="16" name="No2"/>
+                    <value edge_id="24" name="10"/>
+                    <value edge_id="26" name="11"/>
+                    <value edge_id="27" name="12"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="10" graph_id="6" name="Test situations 4, TDL= 1, ALG= PCT." note="" test_situations_data_rows="3">
+                <combinations_data_value col="0" selected_row="0">Check if
+exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase exhausted
+status</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">START</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Yes1
+
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Get its state</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">Yes3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Check if
+exhausted</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">9
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Break it
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">No2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">END C</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">No1
+12
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="7">Check if 
+its broken
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="7">5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="8">Gather report</combinations_data_value>
+                <combinations_data_value col="1" selected_row="8">11
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="9">Find random room 
+with appliance
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="9">Yes2
+No
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="16" name="No2"/>
+                    <value edge_id="24" name="10"/>
+                    <value edge_id="26" name="11"/>
+                    <value edge_id="27" name="12"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="10" graph_id="6" name="Test situations 5, TDL= 1, ALG= PCT." note="" test_situations_data_rows="3">
+                <combinations_data_value col="0" selected_row="0">Check if
+exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase exhausted
+status</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">START</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Yes1
+
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Get its state</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">Yes3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Check if
+exhausted</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">9
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Break it
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">No2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">END C</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">No1
+12
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="7">Check if 
+its broken
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="7">5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="8">Gather report</combinations_data_value>
+                <combinations_data_value col="1" selected_row="8">11
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="9">Find random room 
+with appliance
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="9">Yes2
+No
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="16" name="No2"/>
+                    <value edge_id="24" name="10"/>
+                    <value edge_id="26" name="11"/>
+                    <value edge_id="27" name="12"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="8" graph_id="6" name="Test situations 6, TDL= 3, ALG= PCT." note="" test_situations_data_rows="5">
+                <combinations_data_value col="0" selected_row="0">Check if
+exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2 - Yes3 - 5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase exhausted
+status</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">10 - 11 - 12
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">START</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Yes1
+ - 9 - No
+Yes1
+ - 9 - Yes1
+
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Get its state</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">Yes3 - 5 - Yes2
+Yes3 - 5 - No2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Check if
+exhausted</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">9 - No - 2
+9 - Yes1
+ - 9
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Break it
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">No2 - 10 - 11
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">Check if 
+its broken
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">5 - Yes2 - 2
+5 - No2 - 10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="7">Find random room 
+with appliance
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="7">Yes2 - 2 - No1
+Yes2 - 2 - Yes3
+No - 2 - No1
+No - 2 - Yes3
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="16" name="No2"/>
+                    <value edge_id="24" name="10"/>
+                    <value edge_id="26" name="11"/>
+                    <value edge_id="27" name="12"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="8" graph_id="6" name="Test situations 7, TDL= 3, ALG= PCT." note="" test_situations_data_rows="5">
+                <combinations_data_value col="0" selected_row="0">Check if
+exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2 - Yes3 - 5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase exhausted
+status</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">10 - 11 - 12
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">START</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Yes1
+ - 9 - No
+Yes1
+ - 9 - Yes1
+
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Get its state</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">Yes3 - 5 - Yes2
+Yes3 - 5 - No2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Check if
+exhausted</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">9 - No - 2
+9 - Yes1
+ - 9
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Break it
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">No2 - 10 - 11
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">Check if 
+its broken
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">5 - Yes2 - 2
+5 - No2 - 10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="7">Find random room 
+with appliance
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="7">Yes2 - 2 - No1
+Yes2 - 2 - Yes3
+No - 2 - No1
+No - 2 - Yes3
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="16" name="No2"/>
+                    <value edge_id="24" name="10"/>
+                    <value edge_id="26" name="11"/>
+                    <value edge_id="27" name="12"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="9" graph_id="6" name="Test situations 8, TDL= 2, ALG= PCT." note="" test_situations_data_rows="3">
+                <combinations_data_value col="0" selected_row="0">Check if
+exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2 - No1
+2 - Yes3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase exhausted
+status</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">10 - 11
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">START</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Yes1
+ - 9
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Get its state</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">Yes3 - 5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Check if
+exhausted</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">9 - No
+9 - Yes1
+
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Break it
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">No2 - 10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">Check if 
+its broken
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">5 - Yes2
+5 - No2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="7">Gather report</combinations_data_value>
+                <combinations_data_value col="1" selected_row="7">11 - 12
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="8">Find random room 
+with appliance
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="8">Yes2 - 2
+No - 2
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="16" name="No2"/>
+                    <value edge_id="24" name="10"/>
+                    <value edge_id="26" name="11"/>
+                    <value edge_id="27" name="12"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="10" graph_id="6" name="Test situations 9, TDL= 1, ALG= PCT." note="" test_situations_data_rows="3">
+                <combinations_data_value col="0" selected_row="0">Check if
+exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase exhausted
+status</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">START</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Yes1
+
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Get its state</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">Yes3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Check if
+exhausted</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">9
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Break it
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">No2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">END C</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">No1
+12
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="7">Check if 
+its broken
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="7">5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="8">Gather report</combinations_data_value>
+                <combinations_data_value col="1" selected_row="8">11
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="9">Find random room 
+with appliance
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="9">Yes2
+No
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="16" name="No2"/>
+                    <value edge_id="24" name="10"/>
+                    <value edge_id="26" name="11"/>
+                    <value edge_id="27" name="12"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="8" graph_id="6" name="Test situations 10, TDL= 3, ALG= PCT." note="" test_situations_data_rows="5">
+                <combinations_data_value col="0" selected_row="0">Check if
+exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2 - Yes3 - 5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase exhausted
+status</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">10 - 11 - 12
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">START</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Yes1
+ - 9 - No
+Yes1
+ - 9 - Yes1
+
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Get its state</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">Yes3 - 5 - Yes2
+Yes3 - 5 - No2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Check if
+exhausted</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">9 - No - 2
+9 - Yes1
+ - 9
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Break it
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">No2 - 10 - 11
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">Check if 
+its broken
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">5 - Yes2 - 2
+5 - No2 - 10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="7">Find random room 
+with appliance
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="7">Yes2 - 2 - No1
+Yes2 - 2 - Yes3
+No - 2 - No1
+No - 2 - Yes3
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="16" name="No2"/>
+                    <value edge_id="24" name="10"/>
+                    <value edge_id="26" name="11"/>
+                    <value edge_id="27" name="12"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="11" name="Yes3"/>
+                    <value edge_id="13" name="5"/>
+                    <value edge_id="14" name="Yes2"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="23" name="Yes1&#10;"/>
+                    <value edge_id="22" name="9"/>
+                    <value edge_id="19" name="No"/>
+                    <value edge_id="7" name="2"/>
+                    <value edge_id="9" name="No1"/>
+                </test_situation_row>
+            </test_case>
+        </graph>
+        <graph description="" id="17" linkage="" name="Human repair appliance" type="ACTIVITY_DIAGRAM" version="">
+            <node description="" height="40.0" id="3" name="Check if&#10;is busy" priority="" style="STYLE_ACTIVITY_DECISION" width="60.0" xpos="50.0" ypos="150.0"/>
+            <edge description="" id="7" name="No" priority="" source="3" target="6"/>
+            <edge description="" id="24" name="Yes" priority="" source="3" target="17"/>
+            <node description="" height="40.0" id="6" name="Repair appliance" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="40.0" ypos="240.0"/>
+            <edge description="" id="9" name="4" priority="" source="6" target="8"/>
+            <node description="" height="60.0" id="8" name="Check if has&#10;repair ability" priority="" style="STYLE_ACTIVITY_DECISION" width="80.0" xpos="140.0" ypos="280.0"/>
+            <edge description="" id="11" name="Does not" priority="" source="8" target="10"/>
+            <edge description="" id="13" name="Does" priority="" source="8" target="12"/>
+            <node description="" height="35.0" id="10" name="END D" priority="" style="STYLE_ACTIVITY_END" width="35.0" xpos="330.0" ypos="90.0"/>
+            <node description="" height="40.0" id="12" name="Set busy time" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="140.0" ypos="370.0"/>
+            <edge description="" id="15" name="7" priority="" source="12" target="14"/>
+            <node description="" height="40.0" id="14" name="Gather report" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="300.0" ypos="370.0"/>
+            <edge description="" id="16" name="8" priority="" source="14" target="10"/>
+            <node description="" height="40.0" id="17" name="Find broken device" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="40.0" ypos="80.0"/>
+            <edge description="" id="21" name="10" priority="" source="17" target="20"/>
+            <node description="" height="25.0" id="18" name="START" priority="" style="STYLE_ACTIVITY_START" width="25.0" xpos="80.0" ypos="20.0"/>
+            <edge description="" id="19" name="9" priority="" source="18" target="17"/>
+            <node description="" height="40.0" id="20" name="Exists" priority="" style="STYLE_ACTIVITY_DECISION" width="40.0" xpos="150.0" ypos="90.0"/>
+            <edge description="" id="22" name="Dont exists" priority="" source="20" target="10"/>
+            <edge description="" id="23" name="Does exists" priority="" source="20" target="3"/>
+            <test_case changed="false" combinations_data_rows="8" graph_id="17" name="Test situations 1, TDL= 1, ALG= PCT." note="" test_situations_data_rows="3">
+                <combinations_data_value col="0" selected_row="0">Repair appliance</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">No
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">END D</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">Does not
+8
+Dont exists
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">Check if
+is busy</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Does exists
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Gather report</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">7
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Check if has
+repair ability</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">4
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">Find broken device</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">Yes
+9
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="7">Set busy time</combinations_data_value>
+                <combinations_data_value col="1" selected_row="7">Does
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="19" name="9"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="24" name="Yes"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="7" name="No"/>
+                    <value edge_id="9" name="4"/>
+                    <value edge_id="11" name="Does not"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="19" name="9"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="24" name="Yes"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="7" name="No"/>
+                    <value edge_id="9" name="4"/>
+                    <value edge_id="13" name="Does"/>
+                    <value edge_id="15" name="7"/>
+                    <value edge_id="16" name="8"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="19" name="9"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="24" name="Yes"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="22" name="Dont exists"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="7" graph_id="17" name="Test situations 2, TDL= 2, ALG= PCT." note="" test_situations_data_rows="3">
+                <combinations_data_value col="0" selected_row="0">Repair appliance</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">No - 4
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Check if
+is busy</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">Does exists - No
+Does exists - Yes
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">Gather report</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">7 - 8
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">10 - Dont exists
+10 - Does exists
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Check if has
+repair ability</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">4 - Does not
+4 - Does
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Find broken device</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">Yes - 10
+9 - 10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">Set busy time</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">Does - 7
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="19" name="9"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="24" name="Yes"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="7" name="No"/>
+                    <value edge_id="9" name="4"/>
+                    <value edge_id="11" name="Does not"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="19" name="9"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="24" name="Yes"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="7" name="No"/>
+                    <value edge_id="9" name="4"/>
+                    <value edge_id="13" name="Does"/>
+                    <value edge_id="15" name="7"/>
+                    <value edge_id="16" name="8"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="19" name="9"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="24" name="Yes"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="22" name="Dont exists"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="6" graph_id="17" name="Test situations 3, TDL= 3, ALG= PCT." note="" test_situations_data_rows="4">
+                <combinations_data_value col="0" selected_row="0">Repair appliance</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">No - 4 - Does not
+No - 4 - Does
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Check if
+is busy</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">Does exists - No - 4
+Does exists - Yes - 10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">Exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">10 - Does exists - No
+10 - Does exists - Yes
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Check if has
+repair ability</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">4 - Does - 7
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Find broken device</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">Yes - 10 - Dont exists
+Yes - 10 - Does exists
+9 - 10 - Dont exists
+9 - 10 - Does exists
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Set busy time</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">Does - 7 - 8
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="19" name="9"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="24" name="Yes"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="7" name="No"/>
+                    <value edge_id="9" name="4"/>
+                    <value edge_id="11" name="Does not"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="19" name="9"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="24" name="Yes"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="7" name="No"/>
+                    <value edge_id="9" name="4"/>
+                    <value edge_id="13" name="Does"/>
+                    <value edge_id="15" name="7"/>
+                    <value edge_id="16" name="8"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="19" name="9"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="24" name="Yes"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="23" name="Does exists"/>
+                    <value edge_id="24" name="Yes"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="22" name="Dont exists"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="19" name="9"/>
+                    <value edge_id="21" name="10"/>
+                    <value edge_id="22" name="Dont exists"/>
+                </test_situation_row>
+            </test_case>
+        </graph>
+        <graph description="" id="21" linkage="" name="Sensor reaction to the storm" type="ACTIVITY_DIAGRAM" version="">
+            <node description="" height="25.0" id="2" name="START" priority="" style="STYLE_ACTIVITY_START" width="25.0" xpos="90.0" ypos="30.0"/>
+            <edge description="" id="6" name="2" priority="" source="2" target="3"/>
+            <node description="" height="40.0" id="3" name="Set number&#10;till inactive&#10;" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="70.0" ypos="80.0"/>
+            <edge description="" id="5" name="1" priority="" source="3" target="4"/>
+            <node description="" height="40.0" id="4" name="Find appropriate&#10;sensor" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="60.0" ypos="190.0"/>
+            <edge description="" id="8" name="3" priority="" source="4" target="7"/>
+            <node description="" height="40.0" id="7" name="Exists" priority="" style="STYLE_ACTIVITY_DECISION" width="40.0" xpos="70.0" ypos="270.0"/>
+            <edge description="" id="14" name="Does not" priority="" source="7" target="13"/>
+            <edge description="" id="22" name="Yes" priority="" source="7" target="20"/>
+            <node description="" height="35.0" id="13" name="END F" priority="" style="STYLE_ACTIVITY_END" width="35.0" xpos="260.0" ypos="90.0"/>
+            <node description="" height="40.0" id="20" name="Check temperature&#10;" priority="" style="STYLE_ACTIVITY_DECISION" width="40.0" xpos="160.0" ypos="300.0"/>
+            <edge description="" id="24" name="Low" priority="" source="20" target="23"/>
+            <edge description="" id="27" name="High" priority="" source="20" target="26"/>
+            <node description="" height="40.0" id="23" name="Increase it" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="280.0" ypos="330.0"/>
+            <edge description="" id="29" name="9" priority="" source="23" target="26"/>
+            <node description="" height="40.0" id="25" name="Gather report" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="360.0" ypos="170.0"/>
+            <edge description="" id="30" name="10" priority="" source="25" target="13"/>
+            <node description="" height="40.0" id="26" name="Check blinds" priority="" style="STYLE_ACTIVITY_DECISION" width="40.0" xpos="260.0" ypos="240.0"/>
+            <edge description="" id="28" name="Closed" priority="" source="26" target="25"/>
+            <edge description="" id="32" name="Open" priority="" source="26" target="31"/>
+            <node description="" height="40.0" id="31" name="Close blinds" priority="" style="STYLE_ACTIVITY_NODE" width="80.0" xpos="420.0" ypos="250.0"/>
+            <edge description="" id="33" name="12" priority="" source="31" target="25"/>
+            <test_case changed="true" combinations_data_rows="7" graph_id="21" name="Test situations 1, TDL= 1, ALG= PCT." note="" test_situations_data_rows="2">
+                <combinations_data_value col="0" selected_row="0">Set number
+till inactive
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase 
+temperature</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">Does
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">END F</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Does not
+8
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Find appropriate
+sensor</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">1
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Close blinds</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">Gather report</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">7
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="10" name="Does"/>
+                    <value edge_id="12" name="5"/>
+                    <value edge_id="18" name="7"/>
+                    <value edge_id="19" name="8"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="14" name="Does not"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="true" combinations_data_rows="6" graph_id="21" name="Test situations 2, TDL= 2, ALG= PCT." note="" test_situations_data_rows="2">
+                <combinations_data_value col="0" selected_row="0">Set number
+till inactive
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2 - 1
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase 
+temperature</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">Does - 5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">Exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">3 - Does
+3 - Does not
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Find appropriate
+sensor</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">1 - 3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Close blinds</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">5 - 7
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Gather report</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">7 - 8
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="10" name="Does"/>
+                    <value edge_id="12" name="5"/>
+                    <value edge_id="18" name="7"/>
+                    <value edge_id="19" name="8"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="14" name="Does not"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="true" combinations_data_rows="5" graph_id="21" name="Test situations 3, TDL= 3, ALG= PCT." note="" test_situations_data_rows="2">
+                <combinations_data_value col="0" selected_row="0">Close blinds</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">5 - 7 - 8
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Set number
+till inactive
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">2 - 1 - 3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">Increase 
+temperature</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Does - 5 - 7
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">3 - Does - 5
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Find appropriate
+sensor</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">1 - 3 - Does
+1 - 3 - Does not
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="10" name="Does"/>
+                    <value edge_id="12" name="5"/>
+                    <value edge_id="18" name="7"/>
+                    <value edge_id="19" name="8"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="14" name="Does not"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="9" graph_id="21" name="Test situations 4, TDL= 1, ALG= PCT." note="" test_situations_data_rows="3">
+                <combinations_data_value col="0" selected_row="0">Set number
+till inactive
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">END F</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">Does not
+10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">Increase it</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">Low
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Check blinds</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">High
+9
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Close blinds</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">Open
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">Find appropriate
+sensor</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">1
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="7">Gather report</combinations_data_value>
+                <combinations_data_value col="1" selected_row="7">Closed
+12
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="8">Check temperature
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="8">Yes
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="14" name="Does not"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="22" name="Yes"/>
+                    <value edge_id="27" name="High"/>
+                    <value edge_id="28" name="Closed"/>
+                    <value edge_id="30" name="10"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="22" name="Yes"/>
+                    <value edge_id="24" name="Low"/>
+                    <value edge_id="29" name="9"/>
+                    <value edge_id="32" name="Open"/>
+                    <value edge_id="33" name="12"/>
+                    <value edge_id="30" name="10"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="8" graph_id="21" name="Test situations 5, TDL= 2, ALG= PCT." note="" test_situations_data_rows="5">
+                <combinations_data_value col="0" selected_row="0">Set number
+till inactive
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2 - 1
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase it</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">Low - 9
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">Check blinds</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">High - Closed
+High - Open
+9 - Closed
+9 - Open
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">3 - Does not
+3 - Yes
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Close blinds</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">Open - 12
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Find appropriate
+sensor</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">1 - 3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">Gather report</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">Closed - 10
+12 - 10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="7">Check temperature
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="7">Yes - Low
+Yes - High
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="14" name="Does not"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="22" name="Yes"/>
+                    <value edge_id="24" name="Low"/>
+                    <value edge_id="29" name="9"/>
+                    <value edge_id="28" name="Closed"/>
+                    <value edge_id="30" name="10"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="22" name="Yes"/>
+                    <value edge_id="27" name="High"/>
+                    <value edge_id="28" name="Closed"/>
+                    <value edge_id="30" name="10"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="22" name="Yes"/>
+                    <value edge_id="27" name="High"/>
+                    <value edge_id="32" name="Open"/>
+                    <value edge_id="33" name="12"/>
+                    <value edge_id="30" name="10"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="22" name="Yes"/>
+                    <value edge_id="24" name="Low"/>
+                    <value edge_id="29" name="9"/>
+                    <value edge_id="32" name="Open"/>
+                    <value edge_id="33" name="12"/>
+                    <value edge_id="30" name="10"/>
+                </test_situation_row>
+            </test_case>
+            <test_case changed="false" combinations_data_rows="7" graph_id="21" name="Test situations 6, TDL= 3, ALG= PCT." note="" test_situations_data_rows="5">
+                <combinations_data_value col="0" selected_row="0">Set number
+till inactive
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="0">2 - 1 - 3
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="1">Increase it</combinations_data_value>
+                <combinations_data_value col="1" selected_row="1">Low - 9 - Closed
+Low - 9 - Open
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="2">Check blinds</combinations_data_value>
+                <combinations_data_value col="1" selected_row="2">High - Closed - 10
+High - Open - 12
+9 - Closed - 10
+9 - Open - 12
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="3">Exists</combinations_data_value>
+                <combinations_data_value col="1" selected_row="3">3 - Yes - Low
+3 - Yes - High
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="4">Close blinds</combinations_data_value>
+                <combinations_data_value col="1" selected_row="4">Open - 12 - 10
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="5">Find appropriate
+sensor</combinations_data_value>
+                <combinations_data_value col="1" selected_row="5">1 - 3 - Does not
+1 - 3 - Yes
+</combinations_data_value>
+                <combinations_data_value col="0" selected_row="6">Check temperature
+</combinations_data_value>
+                <combinations_data_value col="1" selected_row="6">Yes - Low - 9
+Yes - High - Closed
+Yes - High - Open
+</combinations_data_value>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="14" name="Does not"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="22" name="Yes"/>
+                    <value edge_id="24" name="Low"/>
+                    <value edge_id="29" name="9"/>
+                    <value edge_id="28" name="Closed"/>
+                    <value edge_id="30" name="10"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="22" name="Yes"/>
+                    <value edge_id="27" name="High"/>
+                    <value edge_id="28" name="Closed"/>
+                    <value edge_id="30" name="10"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="22" name="Yes"/>
+                    <value edge_id="27" name="High"/>
+                    <value edge_id="32" name="Open"/>
+                    <value edge_id="33" name="12"/>
+                    <value edge_id="30" name="10"/>
+                </test_situation_row>
+                <test_situation_row>
+                    <value edge_id="6" name="2"/>
+                    <value edge_id="5" name="1"/>
+                    <value edge_id="8" name="3"/>
+                    <value edge_id="22" name="Yes"/>
+                    <value edge_id="24" name="Low"/>
+                    <value edge_id="29" name="9"/>
+                    <value edge_id="32" name="Open"/>
+                    <value edge_id="33" name="12"/>
+                    <value edge_id="30" name="10"/>
+                </test_situation_row>
+            </test_case>
+        </graph>
+    </graphs>
+    <crud linkage="" version="">
+        <description/>
+        <entities>
+            <entity entity_id="E0">
+                <name>E1</name>
+                <description/>
+                <attributes/>
+            </entity>
+            <entity entity_id="E1">
+                <name>E2</name>
+                <description/>
+                <attributes/>
+            </entity>
+            <entity entity_id="E2">
+                <name>E3</name>
+                <description/>
+                <attributes/>
+            </entity>
+        </entities>
+        <functions>
+            <function function_id="F0">
+                <name>F1</name>
+                <description/>
+            </function>
+            <function function_id="F1">
+                <name>F2</name>
+                <description/>
+            </function>
+            <function function_id="F2">
+                <name>F3</name>
+                <description/>
+            </function>
+        </functions>
+        <actions>
+            <action entity_id_ref="E0" function_id_ref="F0">
+                <create imns="false" is_set="false">
+                    <touched_attributes/>
+                </create>
+                <read imns="false" is_set="false">
+                    <touched_attributes/>
+                </read>
+                <update imns="false" is_set="false">
+                    <touched_attributes/>
+                </update>
+                <delete imns="false" is_set="false">
+                    <touched_attributes/>
+                </delete>
+                <best_read imns="false" is_set="false"/>
+                <influences>
+                    <influence entity_id_ref="E1" imns="false" is_set="false"/>
+                    <influence entity_id_ref="E2" imns="false" is_set="false"/>
+                </influences>
+            </action>
+            <action entity_id_ref="E1" function_id_ref="F0">
+                <create imns="false" is_set="false">
+                    <touched_attributes/>
+                </create>
+                <read imns="false" is_set="false">
+                    <touched_attributes/>
+                </read>
+                <update imns="false" is_set="false">
+                    <touched_attributes/>
+                </update>
+                <delete imns="false" is_set="false">
+                    <touched_attributes/>
+                </delete>
+                <best_read imns="false" is_set="false"/>
+                <influences>
+                    <influence entity_id_ref="E0" imns="false" is_set="false"/>
+                    <influence entity_id_ref="E2" imns="false" is_set="false"/>
+                </influences>
+            </action>
+            <action entity_id_ref="E2" function_id_ref="F0">
+                <create imns="false" is_set="false">
+                    <touched_attributes/>
+                </create>
+                <read imns="false" is_set="false">
+                    <touched_attributes/>
+                </read>
+                <update imns="false" is_set="false">
+                    <touched_attributes/>
+                </update>
+                <delete imns="false" is_set="false">
+                    <touched_attributes/>
+                </delete>
+                <best_read imns="false" is_set="false"/>
+                <influences>
+                    <influence entity_id_ref="E0" imns="false" is_set="false"/>
+                    <influence entity_id_ref="E1" imns="false" is_set="false"/>
+                </influences>
+            </action>
+            <action entity_id_ref="E0" function_id_ref="F1">
+                <create imns="false" is_set="false">
+                    <touched_attributes/>
+                </create>
+                <read imns="false" is_set="false">
+                    <touched_attributes/>
+                </read>
+                <update imns="false" is_set="false">
+                    <touched_attributes/>
+                </update>
+                <delete imns="false" is_set="false">
+                    <touched_attributes/>
+                </delete>
+                <best_read imns="false" is_set="false"/>
+                <influences>
+                    <influence entity_id_ref="E1" imns="false" is_set="false"/>
+                    <influence entity_id_ref="E2" imns="false" is_set="false"/>
+                </influences>
+            </action>
+            <action entity_id_ref="E1" function_id_ref="F1">
+                <create imns="false" is_set="false">
+                    <touched_attributes/>
+                </create>
+                <read imns="false" is_set="false">
+                    <touched_attributes/>
+                </read>
+                <update imns="false" is_set="false">
+                    <touched_attributes/>
+                </update>
+                <delete imns="false" is_set="false">
+                    <touched_attributes/>
+                </delete>
+                <best_read imns="false" is_set="false"/>
+                <influences>
+                    <influence entity_id_ref="E0" imns="false" is_set="false"/>
+                    <influence entity_id_ref="E2" imns="false" is_set="false"/>
+                </influences>
+            </action>
+            <action entity_id_ref="E2" function_id_ref="F1">
+                <create imns="false" is_set="false">
+                    <touched_attributes/>
+                </create>
+                <read imns="false" is_set="false">
+                    <touched_attributes/>
+                </read>
+                <update imns="false" is_set="false">
+                    <touched_attributes/>
+                </update>
+                <delete imns="false" is_set="false">
+                    <touched_attributes/>
+                </delete>
+                <best_read imns="false" is_set="false"/>
+                <influences>
+                    <influence entity_id_ref="E0" imns="false" is_set="false"/>
+                    <influence entity_id_ref="E1" imns="false" is_set="false"/>
+                </influences>
+            </action>
+            <action entity_id_ref="E0" function_id_ref="F2">
+                <create imns="false" is_set="false">
+                    <touched_attributes/>
+                </create>
+                <read imns="false" is_set="false">
+                    <touched_attributes/>
+                </read>
+                <update imns="false" is_set="false">
+                    <touched_attributes/>
+                </update>
+                <delete imns="false" is_set="false">
+                    <touched_attributes/>
+                </delete>
+                <best_read imns="false" is_set="false"/>
+                <influences>
+                    <influence entity_id_ref="E1" imns="false" is_set="false"/>
+                    <influence entity_id_ref="E2" imns="false" is_set="false"/>
+                </influences>
+            </action>
+            <action entity_id_ref="E1" function_id_ref="F2">
+                <create imns="false" is_set="false">
+                    <touched_attributes/>
+                </create>
+                <read imns="false" is_set="false">
+                    <touched_attributes/>
+                </read>
+                <update imns="false" is_set="false">
+                    <touched_attributes/>
+                </update>
+                <delete imns="false" is_set="false">
+                    <touched_attributes/>
+                </delete>
+                <best_read imns="false" is_set="false"/>
+                <influences>
+                    <influence entity_id_ref="E0" imns="false" is_set="false"/>
+                    <influence entity_id_ref="E2" imns="false" is_set="false"/>
+                </influences>
+            </action>
+            <action entity_id_ref="E2" function_id_ref="F2">
+                <create imns="false" is_set="false">
+                    <touched_attributes/>
+                </create>
+                <read imns="false" is_set="false">
+                    <touched_attributes/>
+                </read>
+                <update imns="false" is_set="false">
+                    <touched_attributes/>
+                </update>
+                <delete imns="false" is_set="false">
+                    <touched_attributes/>
+                </delete>
+                <best_read imns="false" is_set="false"/>
+                <influences>
+                    <influence entity_id_ref="E0" imns="false" is_set="false"/>
+                    <influence entity_id_ref="E1" imns="false" is_set="false"/>
+                </influences>
+            </action>
+        </actions>
+        <test_cases/>
+    </crud>
+</project>
