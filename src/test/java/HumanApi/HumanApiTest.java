@@ -61,7 +61,7 @@ public class HumanApiTest {
         System.out.println("goSleep");
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
-        Human hm = new Adult(null, "name", house, 10);
+        Human hm = new Adult(null, "name", house, 10, "male");
         HumanApi ap = new HumanApi(hm);
         ap.goSleep();
         assertTrue("Has to be greater than 0", hm.getBusyTime() > 0);
@@ -78,7 +78,7 @@ public class HumanApiTest {
         ArrayList<HumanAbility> abilities = new ArrayList<>();
         abilities.add(HumanAbility.CAN_REPAIR);
         abilities.add(HumanAbility.CAN_SPORT);
-        Human david = HumanFactory.createHuman("Adult", abilities, "David", house, 10);
+        Human david = HumanFactory.createHuman("Adult", abilities, "David", house, 10, "male");
         Appliance apl = new CoffeeMaker(1, new Documentation(5), 1);
         david.getApi().repairAppliance(apl);
         assertTrue("Greater than 0", david.getBusyTime() > 0);
@@ -95,7 +95,7 @@ public class HumanApiTest {
         ArrayList<HumanAbility> abilities = new ArrayList<>();
         abilities.add(HumanAbility.CAN_REPAIR);
         abilities.add(HumanAbility.CAN_SPORT);
-        Human david = HumanFactory.createHuman("Adult", abilities, "David", house, 10);
+        Human david = HumanFactory.createHuman("Adult", abilities, "David", house, 10, "male");
         
         david.getApi().doSport();
         assertTrue("BusyTime (" + david.getBusyTime() + ") should be  60 (" + 60 + ")", david.getBusyTime() == 60);
@@ -110,7 +110,7 @@ public class HumanApiTest {
         System.out.println("findRandomRoomWithAppliance");
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
-        Human hm = new Adult(null, "name", house, 10);
+        Human hm = new Adult(null, "name", house, 10, "male");
         HumanApi ap = new HumanApi(hm);
         Room instance = ap.findRandomRoomWithAppliance();
         assertTrue("Has to be greater than 0", instance.getAppliance().size() > 0);
@@ -124,7 +124,7 @@ public class HumanApiTest {
         System.out.println("findRandomFreeAppliance");
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
-        Human hm = new Adult(null, "name", house, 10);
+        Human hm = new Adult(null, "name", house, 10, "male");
         HumanApi ap = new HumanApi(hm);
         Room instance = ap.findRandomRoomWithAppliance();
         Appliance app = ap.findRandomFreeAppliance(instance.getAppliance());

@@ -25,8 +25,8 @@ public class Kid extends Human{
         return abilities;
     }
 
-    public Kid(ArrayList<HumanAbility> abilities, String name, House house, Integer age) {
-        super(abilities, name, house, age);
+    public Kid(ArrayList<HumanAbility> abilities, String name, House house, Integer age, String gender) {
+        super(abilities, name, house, age, gender);
         this.busyTime = 0;
         this.state = new StateFresh(this);
     }

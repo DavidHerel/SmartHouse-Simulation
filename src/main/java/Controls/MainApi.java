@@ -188,13 +188,13 @@ public class MainApi {
                     ArrayList<HumanAbility> abilities = new ArrayList<>();
                     abilities.add(HumanAbility.CAN_REPAIR);
                     abilities.add(HumanAbility.CAN_SPORT);
-                    people.add(HumanFactory.createHuman("Adult", abilities, br.readLine(), this.house, 10));
+                    people.add(HumanFactory.createHuman("Adult", abilities, br.readLine(), this.house, 10, "male"));
                     break;
                 case 'K':
                     System.out.println("Enter your kid's name.");
                     abilities = new ArrayList<>();
                     abilities.add(HumanAbility.CAN_SPORT);
-                    people.add(HumanFactory.createHuman("Kid", abilities, br.readLine(), this.house, 10));
+                    people.add(HumanFactory.createHuman("Kid", abilities, br.readLine(), this.house, 10, "male"));
                     break;
                 case 'H':
                     System.out.println("PIZDIEC!");
@@ -301,7 +301,7 @@ public class MainApi {
                                 ArrayList<HumanAbility> abilities = new ArrayList<>();
                                 abilities.add(HumanAbility.CAN_REPAIR);
                                 abilities.add(HumanAbility.CAN_SPORT);
-                                people.add(HumanFactory.createHuman("Adult", abilities, br.readLine(), this.house, Integer.parseInt(br.readLine())));
+                                people.add(HumanFactory.createHuman("Adult", abilities, br.readLine(), this.house, Integer.parseInt(br.readLine()), br.readLine()));
                                 break;
                             }
                         case "K":
@@ -309,7 +309,7 @@ public class MainApi {
                                 ArrayList<HumanAbility> abilities = new ArrayList<>();
                                 abilities = new ArrayList<>();
                                 abilities.add(HumanAbility.CAN_SPORT);
-                                people.add(HumanFactory.createHuman("Kid", abilities, br.readLine(), this.house, Integer.parseInt(br.readLine())));
+                                people.add(HumanFactory.createHuman("Kid", abilities, br.readLine(), this.house, Integer.parseInt(br.readLine()), br.readLine()));
                                 break;
                             }
                         case "D":
