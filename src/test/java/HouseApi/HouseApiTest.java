@@ -10,10 +10,7 @@ import House.House;
 import Room.Room;
 import Room.RoomType;
 import House.Window;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 import Appliance.Computer;
 import Appliance.Documentation;
 
@@ -28,13 +25,13 @@ import static org.junit.Assert.assertTrue;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class HouseApiTest {
 
-    //TODO tag HOUSE
     /**
      * Test blinds and windows functionality
      * @throws Exception
      */
     @Test
     @Order(4)
+    @Tag("House")
     public void testBlinds() throws Exception{
         System.out.println("Test if closing blinds affects multiple windows");
         MainApi api = MainApi.getApi();
@@ -67,6 +64,7 @@ public class HouseApiTest {
      */
     @Test
     @Order(3)
+    @Tag("House")
     public void testConsumptionOfHouseAddAppliance() throws Exception{
         System.out.println("Consumption test when we add a new appliance");
         MainApi api = MainApi.getApi();
@@ -97,6 +95,7 @@ public class HouseApiTest {
      */
     @Test
     @Order(2)
+    @Tag("House")
     public void testConsumptionOfHouseWhenAppliancesWorking() throws Exception{
         System.out.println("Consumption test when appliances are working");
         MainApi api = MainApi.getApi();
@@ -122,6 +121,7 @@ public class HouseApiTest {
      */
     @Test
     @Order(1)
+    @Tag("House")
     public void testConsumptionOfEmptyHouse() throws Exception{
         System.out.println("Consumption test of an empty house");
         MainApi api = MainApi.getApi();

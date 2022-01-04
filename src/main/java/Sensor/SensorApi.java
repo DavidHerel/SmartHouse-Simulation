@@ -59,7 +59,7 @@ public class SensorApi {
         }
     }
     
-    private void restoreState(Sensor sensor) {
+    public void restoreState(Sensor sensor) {
         
         switch(sensor.getEvent().getEvent()){
             case WIND:

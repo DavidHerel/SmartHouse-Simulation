@@ -38,6 +38,7 @@ public class PetApiTest {
      */
     @Test
     @Order(1)
+    @Tag("Living")
     public void testDoRandomStuff() throws Exception {
         System.out.println("Testing method: doRandomStuff");
         MainApi api = MainApi.getApi();
@@ -61,6 +62,7 @@ public class PetApiTest {
      */
     @Test
     @Order(2)
+    @Tag("Living")
     public void testFindRandomRoomWithAppliance() throws Exception {
         System.out.println("findRandomRoomWithAppliance");
         MainApi api = MainApi.getApi();
@@ -76,6 +78,7 @@ public class PetApiTest {
      */
     @Test
     @Order(3)
+    @Tag("Living")
     public void testGoSleep() throws Exception {
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
@@ -90,6 +93,7 @@ public class PetApiTest {
      */
     @Test
     @Order(4)
+    @Tag("Living")
     public void testSlaveTheHumanRace() throws Exception {
         System.out.println("slaveTheHumanRace");
         MainApi api = MainApi.getApi();
@@ -121,6 +125,7 @@ public class PetApiTest {
             "Lucino;;45;Exception"
     }, delimiter = ';')
     @Order(5)
+    @Tag("Living")
     void testLoadParametrizedPet(String name, String petType, Integer age, String expected) throws Exception {
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);

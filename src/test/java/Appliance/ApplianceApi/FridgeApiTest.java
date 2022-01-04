@@ -12,10 +12,8 @@ import Appliance.Documentation;
 import Appliance.Fridge;
 import House.Measurable;
 import java.util.ArrayList;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.TestMethodOrder;
+
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 import sources.CDPlayerInput;
@@ -39,6 +37,7 @@ public class FridgeApiTest {
      */
     @Test
     @Order(6)
+    @Tag("House")
     public void testConsumptionFridge() throws Exception{
         System.out.println("Consumption test");
         Appliance app = new Fridge(5, new Documentation(45), 0, "Samsung");
@@ -58,6 +57,7 @@ public class FridgeApiTest {
      */
     @Test
     @Order(1)
+    @Tag("House")
     public void testWorkFridge() throws Exception {
         System.out.println("work");
         Appliance app = new Fridge(5, new Documentation(45), 0, "Aas");
@@ -71,6 +71,7 @@ public class FridgeApiTest {
      */
     @Test
     @Order(3)
+    @Tag("House")
     public void testBrokenFridge() throws Exception {
         System.out.println("broken");
         Appliance app = new Fridge(5, new Documentation(100), 0, "Aas");
@@ -84,6 +85,7 @@ public class FridgeApiTest {
      */
     @Test
     @Order(4)
+    @Tag("House")
     public void testCreateDocumentationFridge() {
         System.out.println("createDocumentation");
         FridgeApi instance = new FridgeApi();
@@ -95,6 +97,7 @@ public class FridgeApiTest {
     @ParameterizedTest
     @ArgumentsSource(CDPlayerInput.class)
     @Order(5)
+    @Tag("House")
     public void testLoadfromSourceFridge(Integer brokenProb, Integer repairTime, Integer workTime, String name, String expected) {
         if (expected.equals("Exception")) {
             Exception ex = assertThrows(Exception.class, () -> {

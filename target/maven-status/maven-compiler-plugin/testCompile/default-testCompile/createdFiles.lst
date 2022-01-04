@@ -1,0 +1,13 @@
+sources\CDPlayerInput.class
+PetApi\PetApiTest.class
+Appliance\ApplianceApi\CDPlayerApiTest.class
+Sensor\SensorApiTest.class
+Appliance\ApplianceApi\MassageChairApiTest.class
+Appliance\ApplianceApi\TelevisionApiTest.class
+RandomEventsApi\RandomEventsApiTest.class
+Appliance\ApplianceApi\FridgeApiTest.class
+Appliance\ApplianceApi\CoffeeMakerApiTest.class
+HumanApi\HumanApiTest.class
+Appliance\ApplianceApi\XboxApiTest.class
+Appliance\ApplianceApi\ComputerApiTest.class
+Appliance\ApplianceApi\WashingMachineApiTest.class

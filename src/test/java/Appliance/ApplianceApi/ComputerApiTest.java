@@ -10,10 +10,7 @@ import Appliance.CoffeeMaker;
 import Appliance.Computer;
 import Appliance.Documentation;
 import House.Measurable;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 import static org.junit.Assert.*;
@@ -39,6 +36,7 @@ public class ComputerApiTest {
      */
     @Test
     @Order(6)
+    @Tag("House")
     public void testConsumptionOfComputer() throws Exception{
         System.out.println("Consumption test");
         Appliance app = new Computer(5, new Documentation(45), 0, "Samsung");
@@ -55,6 +53,7 @@ public class ComputerApiTest {
      */
     @Test
     @Order(2)
+    @Tag("House")
     public void testWorkComputer() throws Exception {
         System.out.println("work");
         Appliance app = new Computer(5, new Documentation(100), 0, "Aas");
@@ -67,6 +66,7 @@ public class ComputerApiTest {
      */
     @Test
     @Order(3)
+    @Tag("House")
     public void testBrokenComputer() throws Exception {
         System.out.println("broken");
         Appliance app = new Computer(5, new Documentation(100), 0, "Aas");
@@ -80,6 +80,7 @@ public class ComputerApiTest {
      */
     @Test
     @Order(4)
+    @Tag("House")
     public void testCreateDocumentationComputer() {
         System.out.println("createDocumentation");
         ComputerApi instance = new ComputerApi();
@@ -90,6 +91,7 @@ public class ComputerApiTest {
     @ParameterizedTest
     @ArgumentsSource(CDPlayerInput.class)
     @Order(5)
+    @Tag("House")
     public void testLoadfromSourceComputer(Integer brokenProb, Integer repairTime, Integer workTime, String name, String expected) {
         if (expected.equals("Exception")) {
             Exception ex = assertThrows(Exception.class, () -> {

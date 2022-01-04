@@ -30,13 +30,13 @@ public class SensorApiTest {
      */
     @Test
     @Order(1)
+    @Tag("House")
     public void testReactToStorm() throws Exception {
         System.out.println("Testing method: reactToStorm");
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
         Sensor sensor = new Sensor(house);
         RandomEvent randomEvent = new RandomEvent(RandomEventType.STORM, house, 10);
-
         //breaks one appliance
         sensor.getApi().visit(randomEvent, sensor);
 
@@ -52,6 +52,7 @@ public class SensorApiTest {
      */
     @Test
     @Order(2)
+    @Tag("House")
     public void testReactToSun() throws Exception {
         System.out.println("Testing method: reactToSun");
         MainApi api = MainApi.getApi();
@@ -67,13 +68,16 @@ public class SensorApiTest {
             assertTrue("Windows has to be shut", window.getBlinds().isClosed());
 
         });
+        sensor.getApi().restoreState(sensor);
     }
+
 
     /**
      * Test sensor reaction to Snow
      */
     @Test
-    @Order(2)
+    @Order(3)
+    @Tag("House")
     public void testReactToSnow() throws Exception {
         System.out.println("Testing method: reactToSnow");
         MainApi api = MainApi.getApi();
@@ -86,6 +90,7 @@ public class SensorApiTest {
 
         //check
         assertTrue("Temperature has to be 27 Celsius",   sensor.getHouse().getTemperature() == 27);
+        sensor.getApi().restoreState(sensor);
     }
 
     /**
@@ -93,6 +98,7 @@ public class SensorApiTest {
      */
     @Test
     @Order(4)
+    @Tag("House")
     public void testReactToWind() throws Exception {
         System.out.println("Testing method: reactToEvent");
         MainApi api = MainApi.getApi();
@@ -106,6 +112,7 @@ public class SensorApiTest {
         //check
         sensor.getHouse().getWindows().forEach(window -> {  assertTrue("Windows has to be shut", window.getIsShut());
         });
+        sensor.getApi().restoreState(sensor);
     }
 
     /**
@@ -113,6 +120,7 @@ public class SensorApiTest {
      */
     @Test
     @Order(5)
+    @Tag("House")
     public void testReactToUnknown() throws Exception {
         System.out.println("Testing method: reactToEvent");
         MainApi api = MainApi.getApi();

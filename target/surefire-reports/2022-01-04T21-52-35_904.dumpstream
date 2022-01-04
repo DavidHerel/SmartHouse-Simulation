@@ -1,0 +1,4 @@
+# Created at 2022-01-04T21:52:36.216
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Skola\SmartHouse-Simulation\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+

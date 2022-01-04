@@ -43,6 +43,7 @@ public class HumanApiTest {
      */
     @Test
     @Order(1)
+    @Tag("Living")
     public void testGoSleep() throws Exception {
         System.out.println("goSleep");
         MainApi api = MainApi.getApi();
@@ -58,6 +59,7 @@ public class HumanApiTest {
      */
     @Test
     @Order(2)
+    @Tag("Living")
     public void testRepairAppliance() throws Exception {
         System.out.println("repairAppliance");
         MainApi api = MainApi.getApi();
@@ -76,6 +78,7 @@ public class HumanApiTest {
      */
     @Test
     @Order(3)
+    @Tag("Living")
     public void testDoSport() throws Exception {
         System.out.println("DoSport");
         MainApi api = MainApi.getApi();
@@ -94,6 +97,7 @@ public class HumanApiTest {
      */
     @Test
     @Order(4)
+    @Tag("Living")
     public void testFindRandomRoomWithAppliance() throws Exception {
         System.out.println("findRandomRoomWithAppliance");
         System.out.println("findRandomRoomWithAppliance");
@@ -110,6 +114,7 @@ public class HumanApiTest {
      */
     @Test
     @Order(5)
+    @Tag("Living")
     public void testFindRandomFreeAppliance() throws Exception {
         System.out.println("findRandomFreeAppliance");
         MainApi api = MainApi.getApi();
@@ -124,6 +129,7 @@ public class HumanApiTest {
     @ParameterizedTest
     @CsvFileSource(resources = "/SmartHouse-output-2-uni-expected.csv", numLinesToSkip = 1)
     @Order(6)
+    @Tag("Living")
     public void testLoadfromCSVHuman(String name, Integer age, String gender, String expected) throws Exception {
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);

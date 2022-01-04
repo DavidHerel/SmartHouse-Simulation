@@ -4,10 +4,7 @@ import Appliance.Appliance;
 import Furniture.Furniture;
 import Furniture.FurnitureType;
 import Room.Room;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 import Room.RoomType;
 import Appliance.CoffeeMaker;
 import Appliance.Television;
@@ -25,9 +22,9 @@ import static org.junit.Assert.assertTrue;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class RoomApiTest {
 
-    //TODO tag HOUSE or ROOMS
     @Test
     @Order(2)
+    @Tag("House")
     public void testAddingApplianceVSEnergyConsumption() throws Exception{
         ArrayList<Appliance> kitchenAppliances = new ArrayList<Appliance>();
         kitchenAppliances.add(new Fridge(0, new Documentation(10), 10, "Fridge"));
@@ -59,6 +56,7 @@ public class RoomApiTest {
 
     @Test
     @Order(1)
+    @Tag("House")
     public void testAddRemoveFurniture() throws Exception{
         //create rooms
         Room kitchen = new Room(RoomType.KITCHEN, new ArrayList<Appliance>(), new ArrayList<Furniture>(), 0, 1);

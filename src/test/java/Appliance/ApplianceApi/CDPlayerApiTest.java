@@ -35,6 +35,7 @@ public class CDPlayerApiTest {
      */
     @Test
     @Order(5)
+    @Tag("House")
     public void testConsumptionOfCDPlayer() throws Exception{
         System.out.println("Consumption test");
         Appliance app = new CDPlayer(5, new Documentation(45), 0, "Samsung");
@@ -52,6 +53,7 @@ public class CDPlayerApiTest {
      */
     @Test
     @Order(4)
+    @Tag("House")
     public void testWorkOfCDPlayer() throws Exception {
         System.out.println("work");
         Appliance app = new CDPlayer(5, new Documentation(45), 0, "Samsung");
@@ -65,6 +67,7 @@ public class CDPlayerApiTest {
      */
     @Test
     @Order(1)
+    @Tag("House")
     public void testBrokenCDPLayer() throws Exception {
         System.out.println("broken");
         Appliance app = new CDPlayer(5, new Documentation(45), 0, "Samsung");
@@ -78,6 +81,7 @@ public class CDPlayerApiTest {
      */
     @Test
     @Order(2)
+    @Tag("House")
     public void testCreateDocumentationCDPlayer() {
         System.out.println("createDocumentation");
         CDPlayerApi instance = new CDPlayerApi();
@@ -89,6 +93,7 @@ public class CDPlayerApiTest {
     @ParameterizedTest
     @ArgumentsSource(CDPlayerInput.class)
     @Order(3)
+    @Tag("House")
     public void testLoadfromSourceCDplayer(Integer brokenProb, Integer repairTime, Integer workTime, String name, String expected) {
         if (expected.equals("Exception")) {
             Exception ex = assertThrows(Exception.class, () -> {

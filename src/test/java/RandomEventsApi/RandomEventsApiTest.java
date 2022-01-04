@@ -36,11 +36,12 @@ public class RandomEventsApiTest {
             //empty type and wrong strength
             ";420;Exception",
             //wrong type and negative strength
-            "Mist;-2;Exception",
+            "Misty;-2;Exception",
             //Too much big sntregth
             "Cloudy;11;Exception",
     }, delimiter = ';')
     @Order(1)
+    @Tag("House")
     void testLoadParametrizedRandomEvent(String eventType, Integer strength, String expected) throws Exception {
         MainApi api = MainApi.getApi();
         House house = new FamilyHouseBuilder().buildHouse(api);
@@ -54,4 +55,52 @@ public class RandomEventsApiTest {
             });
         }
     }
+
+    @Test
+    @Tag("House")
+    @Order(2)
+    void testBusyTime() throws Exception {
+        MainApi api = MainApi.getApi();
+        House house = new FamilyHouseBuilder().buildHouse(api);
+        RandomEvent randomEvent = new RandomEvent(RandomEventType.STORM, house, 10);
+        randomEvent.getApi().generateEvents();
+        assertTrue("Busy is zero and action is immediate", randomEvent.getBusyTime() == 0);
+    }
+
+    @Test
+    @Tag("House")
+    @Order(3)
+    void testInactiveNumber() throws Exception {
+        MainApi api = MainApi.getApi();
+        House house = new FamilyHouseBuilder().buildHouse(api);
+        RandomEvent randomEvent = new RandomEvent(RandomEventType.STORM, house, 10);
+        randomEvent.getApi().generateEvents();
+        assertTrue("Inactive time should be higher", randomEvent.getNumberTillInactive() > 0);
+    }
+
+
+    @Test
+    @Tag("House")
+    @Order(4)
+    void testNotNullHouse() throws Exception {
+        MainApi api = MainApi.getApi();
+        House house = new FamilyHouseBuilder().buildHouse(api);
+        RandomEvent randomEvent = new RandomEvent(RandomEventType.STORM, house, 10);
+        randomEvent.getApi().generateEvents();
+        assertTrue("House can not be null", randomEvent.getHouse() != null);
+    }
+
+
+    @Test
+    @Tag("House")
+    @Order(5)
+    void testNotNullSensor() throws Exception {
+        MainApi api = MainApi.getApi();
+        House house = new FamilyHouseBuilder().buildHouse(api);
+        RandomEvent randomEvent = new RandomEvent(RandomEventType.STORM, house, 10);
+        randomEvent.getApi().generateEvents();
+        assertTrue("Sensor can not be empty", randomEvent.getHouse() != null);
+    }
+
+
 }

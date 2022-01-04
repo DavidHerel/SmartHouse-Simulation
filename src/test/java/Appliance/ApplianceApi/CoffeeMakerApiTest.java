@@ -10,11 +10,8 @@ import Appliance.CDPlayer;
 import Appliance.CoffeeMaker;
 import Appliance.Documentation;
 import House.Measurable;
+import org.junit.jupiter.api.*;
 import sources.CDPlayerInput;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 import static org.junit.Assert.*;
@@ -35,6 +32,7 @@ public class CoffeeMakerApiTest {
      */
     @Test
     @Order(6)
+    @Tag("House")
     public void testConsumption() throws Exception{
         System.out.println("Consumption test");
         Appliance app = new CoffeeMaker(5, new Documentation(45), 0, "Samsung");
@@ -52,6 +50,7 @@ public class CoffeeMakerApiTest {
      */
     @Test
     @Order(1)
+    @Tag("House")
     public void testWorkCoffeeMaker() throws Exception {
         System.out.println("work");
         Appliance app = new CoffeeMaker(5, new Documentation(45), 0, "Aas");
@@ -65,6 +64,7 @@ public class CoffeeMakerApiTest {
      */
     @Test
     @Order(2)
+    @Tag("House")
     public void testBrokenCoffeeMaker() throws Exception {
         System.out.println("broken");
         Appliance app = new CoffeeMaker(5, new Documentation(45), 0, "Aas");
@@ -78,6 +78,7 @@ public class CoffeeMakerApiTest {
      */
     @Test
     @Order(3)
+    @Tag("House")
     public void testCreateDocumentationCoffeeMaker() {
         System.out.println("createDocumentation");
         CoffeeMakerApi instance = new CoffeeMakerApi();
@@ -90,6 +91,7 @@ public class CoffeeMakerApiTest {
      */
     @Test
     @Order(4)
+    @Tag("House")
     public void testToStringCoffeeMaker() {
         System.out.println("toString");
         CoffeeMakerApi instance = new CoffeeMakerApi();
@@ -100,6 +102,7 @@ public class CoffeeMakerApiTest {
     @ParameterizedTest
     @ArgumentsSource(CDPlayerInput.class)
     @Order(5)
+    @Tag("House")
     public void testLoadfromSourceCoffeeMaker(Integer brokenProb, Integer repairTime, Integer workTime, String name, String expected) {
         if (expected.equals("Exception")) {
             Exception ex = assertThrows(Exception.class, () -> {
