@@ -10,54 +10,62 @@ import Appliance.CDPlayer;
 import Appliance.CoffeeMaker;
 import Appliance.Documentation;
 import House.Measurable;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import sources.CDPlayerInput;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ArgumentsSource;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  *
  * @author fuji
  */
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class CoffeeMakerApiTest {
-    
-    public CoffeeMakerApiTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
+
+
+    /**
+     * Check if CofeeMaker consumes energy during a work
+     * @throws Exception
+     */
+    @Test
+    @Order(6)
+    public void testConsumption() throws Exception{
+        System.out.println("Consumption test");
+        Appliance app = new CoffeeMaker(5, new Documentation(45), 0, "Samsung");
+        CoffeeMakerApi instance = new CoffeeMakerApi();
+        //start the device
+        int workTime = instance.work(app);
+        //measure consumption
+        int expResult = instance.getConsumption(app);
+        assertTrue("Consumption has to be greater than 0 ",expResult>0);
     }
 
     /**
-     * Test of work method, of class CoffeeMakerApi.
+     * Test if Cofee Maker is working correctly
+     * Listening time should be higher than 0
      */
     @Test
-    public void testWork() throws Exception {
+    @Order(1)
+    public void testWorkCoffeeMaker() throws Exception {
         System.out.println("work");
         Appliance app = new CoffeeMaker(5, new Documentation(45), 0, "Aas");
         CoffeeMakerApi instance = new CoffeeMakerApi();
         int expResult = instance.work(app);
         assertEquals(expResult, 1);
     }
+
     /**
      * Test of broken method, of class CoffeeMakerApi.
      */
     @Test
-    public void testBroken() throws Exception {
+    @Order(2)
+    public void testBrokenCoffeeMaker() throws Exception {
         System.out.println("broken");
         Appliance app = new CoffeeMaker(5, new Documentation(45), 0, "Aas");
         CoffeeMakerApi instance = new CoffeeMakerApi();
@@ -69,7 +77,8 @@ public class CoffeeMakerApiTest {
      * Test of createDocumentation method, of class CoffeeMakerApi.
      */
     @Test
-    public void testCreateDocumentation() {
+    @Order(3)
+    public void testCreateDocumentationCoffeeMaker() {
         System.out.println("createDocumentation");
         CoffeeMakerApi instance = new CoffeeMakerApi();
         Documentation expResult = instance.createDocumentation();
@@ -80,11 +89,28 @@ public class CoffeeMakerApiTest {
      * Test of toString method, of class CoffeeMakerApi.
      */
     @Test
-    public void testToString() {
+    @Order(4)
+    public void testToStringCoffeeMaker() {
         System.out.println("toString");
         CoffeeMakerApi instance = new CoffeeMakerApi();
         String expResult = instance.toString();
         assertEquals(expResult, "CoffeeMaker");
+    }
+
+    @ParameterizedTest
+    @ArgumentsSource(CDPlayerInput.class)
+    @Order(5)
+    public void testLoadfromSourceCoffeeMaker(Integer brokenProb, Integer repairTime, Integer workTime, String name, String expected) {
+        if (expected.equals("Exception")) {
+            Exception ex = assertThrows(Exception.class, () -> {
+                Appliance app = new CoffeeMaker(brokenProb, new Documentation(repairTime), workTime, name);
+            }, "Exception was not trown");
+        }
+        if (expected.equals("success")) {
+            assertDoesNotThrow(() -> {
+                Appliance app = new CoffeeMaker(brokenProb, new Documentation(repairTime), workTime, name);
+            });
+        }
     }
 
 }

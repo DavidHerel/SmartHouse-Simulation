@@ -61,6 +61,30 @@ public class RandomEvent {
         numberTillInactive = 0;
     }
 
+    public RandomEvent(String event, House house, Integer strength) throws Exception {
+        if (strength < 0 || strength > 10){
+            throw new Exception("Strength can not be negative or bigger than 10");
+        }
+        if (event.equals("Storm")){
+            this.event = RandomEventType.STORM;
+        }else if (event.equals("Wind")){
+            this.event = RandomEventType.WIND;
+        }else if (event.equals("Snow")){
+            this.event = RandomEventType.SNOW;
+        }else if (event.equals("Sun")){
+            this.event = RandomEventType.SUN;
+        }else{
+            throw new Exception("Uknown event type");
+        }
+
+        this.house = house;
+        this.busyTime = 0;
+        this.api = new RandomEventsApi(this);
+        this.state = new StateActive(this);
+        this.strength = strength;
+        numberTillInactive = 0;
+    }
+
     public RandomEventType getEvent() {
         return event;
     }

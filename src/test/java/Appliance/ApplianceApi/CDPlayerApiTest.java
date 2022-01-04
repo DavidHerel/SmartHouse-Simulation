@@ -19,6 +19,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import sources.CDPlayerInput;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -29,11 +30,42 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CDPlayerApiTest {
 
     /**
-     * Test of broken method, of class CDPlayerApi.
+     * Check if CDplayer consumes energy during a work
+     * @throws Exception
+     */
+    @Test
+    @Order(5)
+    public void testConsumptionOfCDPlayer() throws Exception{
+        System.out.println("Consumption test");
+        Appliance app = new CDPlayer(5, new Documentation(45), 0, "Samsung");
+        CDPlayerApi instance = new CDPlayerApi();
+        //start the device
+        int workTime = instance.work(app);
+        //measure consumption
+        int expResult = instance.getConsumption(app);
+        assertTrue("Consumption has to be greater than 0 ",expResult>0);
+    }
+
+    /**
+     * Test if CD player is working correctly
+     * Listening time should be higher than 0
+     */
+    @Test
+    @Order(4)
+    public void testWorkOfCDPlayer() throws Exception {
+        System.out.println("work");
+        Appliance app = new CDPlayer(5, new Documentation(45), 0, "Samsung");
+        CDPlayerApi instance = new CDPlayerApi();
+        int expResult = instance.work(app);
+        assertTrue("Listening time should be greater than 0 ",expResult>0);
+    }
+
+    /**
+     * Test if CD Player can be broken
      */
     @Test
     @Order(1)
-    public void testBroken() throws Exception {
+    public void testBrokenCDPLayer() throws Exception {
         System.out.println("broken");
         Appliance app = new CDPlayer(5, new Documentation(45), 0, "Samsung");
         CDPlayerApi instance = new CDPlayerApi();
@@ -46,7 +78,7 @@ public class CDPlayerApiTest {
      */
     @Test
     @Order(2)
-    public void testCreateDocumentation() {
+    public void testCreateDocumentationCDPlayer() {
         System.out.println("createDocumentation");
         CDPlayerApi instance = new CDPlayerApi();
         Documentation expResult = instance.createDocumentation();
@@ -68,8 +100,6 @@ public class CDPlayerApiTest {
                 Appliance app = new CDPlayer(brokenProb, new Documentation(repairTime), workTime, name);
             });
         }
-
-
     }
 
 }

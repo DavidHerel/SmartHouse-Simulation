@@ -10,43 +10,52 @@ import Appliance.CoffeeMaker;
 import Appliance.Computer;
 import Appliance.Documentation;
 import House.Measurable;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ArgumentsSource;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import sources.CDPlayerInput;
+
+import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  *
  * @author fuji
  */
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class ComputerApiTest {
-    
-    public ComputerApiTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
+
+    /**
+     * Check if Computer consumes energy during a work
+     * @throws Exception
+     */
+    @Test
+    @Order(6)
+    public void testConsumptionOfComputer() throws Exception{
+        System.out.println("Consumption test");
+        Appliance app = new Computer(5, new Documentation(45), 0, "Samsung");
+        ComputerApi instance = new ComputerApi();
+        //start the device
+        int workTime = instance.work(app);
+        //measure consumption
+        int expResult = instance.getConsumption(app);
+        assertTrue("Consumption has to be greater than 0 ",expResult>0);
     }
 
     /**
      * Test of work method, of class ComputerApi.
      */
     @Test
-    public void testWork() throws Exception {
+    @Order(2)
+    public void testWorkComputer() throws Exception {
         System.out.println("work");
         Appliance app = new Computer(5, new Documentation(100), 0, "Aas");
         ComputerApi instance = new ComputerApi();
@@ -57,7 +66,8 @@ public class ComputerApiTest {
      * Test of broken method, of class ComputerApi.
      */
     @Test
-    public void testBroken() throws Exception {
+    @Order(3)
+    public void testBrokenComputer() throws Exception {
         System.out.println("broken");
         Appliance app = new Computer(5, new Documentation(100), 0, "Aas");
         ComputerApi instance = new ComputerApi();
@@ -69,10 +79,27 @@ public class ComputerApiTest {
      * Test of createDocumentation method, of class ComputerApi.
      */
     @Test
-    public void testCreateDocumentation() {
+    @Order(4)
+    public void testCreateDocumentationComputer() {
         System.out.println("createDocumentation");
         ComputerApi instance = new ComputerApi();
         Documentation expResult = instance.createDocumentation();
         assertEquals(expResult.getRepairTime(), new Documentation(100).getRepairTime());
+    }
+
+    @ParameterizedTest
+    @ArgumentsSource(CDPlayerInput.class)
+    @Order(5)
+    public void testLoadfromSourceComputer(Integer brokenProb, Integer repairTime, Integer workTime, String name, String expected) {
+        if (expected.equals("Exception")) {
+            Exception ex = assertThrows(Exception.class, () -> {
+                Appliance app = new Computer(brokenProb, new Documentation(repairTime), workTime, name);
+            }, "Exception was not trown");
+        }
+        if (expected.equals("success")) {
+            assertDoesNotThrow(() -> {
+                Appliance app = new Computer(brokenProb, new Documentation(repairTime), workTime, name);
+            });
+        }
     }
 }
