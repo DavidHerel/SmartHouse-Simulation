@@ -21,7 +21,7 @@ import Equipment.EquipmentType;
 import House.ClassicWindow;
 import House.FamilyHouse;
 import House.House;
-import House.IkeaBlinds;
+import House.ReliableBlinds;
 import House.Window;
 import Room.Room;
 import Room.RoomType;
@@ -81,7 +81,7 @@ public class FamilyHouseBuilder extends HouseBuilder{
         
         ArrayList<Window> windows = new ArrayList<>();
         for(int i = 0; i < 4; i++){
-            windows.add(new ClassicWindow(new IkeaBlinds()));
+            windows.add(new ClassicWindow(new ReliableBlinds()));
         }
         return windows;
     }    

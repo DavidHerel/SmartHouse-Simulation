@@ -60,7 +60,7 @@ public abstract class House implements Measurable{
         this.equipment = equipment;
         this.api = api;
         this.sensor = new Sensor(this);
-        System.out.println("zde incializace senzoru");
+//        System.out.println("zde incializace senzoru");
         this.temperature = 22;
     }
 
